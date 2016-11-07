@@ -27,6 +27,7 @@ import javax.swing.JSeparator;
 import javax.swing.border.TitledBorder;
 
 import filtros.FiltroTarGz;
+import servicos.ServicoDescompactador;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -68,7 +69,7 @@ public class FrmDiretorio extends JFrame {
 
 		panel = new JPanel();
 		panel.setBorder(
-				new TitledBorder(null, "Selecionar o Diret�rio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+				new TitledBorder(null, "Selecionar o Diretorio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel.setBounds(10, 90, 320, 47);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -92,7 +93,7 @@ public class FrmDiretorio extends JFrame {
 				} else {
 
 					File arquivo = file.getSelectedFile();
-
+					String caminho = arquivo.toString();
 					// File[] qtdArquivos = arquivo.listFiles();
 
 					// int cont = 0;
@@ -108,7 +109,10 @@ public class FrmDiretorio extends JFrame {
 						}
 
 					}
-					// MetodoDescompactar(arquivo.getAbsolutePath(),ListaArquivo);
+					ServicoDescompactador aux = new ServicoDescompactador();
+					aux.extrairLogs(caminho, ListaArquivo);
+			
+					 // MetodoDescompactar(arquivo.getAbsolutePath(),ListaArquivo);
 				}
 			}
 		});
