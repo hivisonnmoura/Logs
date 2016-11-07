@@ -17,7 +17,7 @@ import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 
 public class ServicoDescompactador {
 
-	public void extrairLogs(String caminho, String[] arquivos){
+	public void extrairLogs(String caminho, List<String> arquivos){
 		// precisamos criar o dirtorio temporario
 		try {
 			File localDestino = createTempDirectory();
