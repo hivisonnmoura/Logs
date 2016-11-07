@@ -7,26 +7,14 @@ import java.awt.Frame;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import java.awt.FlowLayout;
-import javax.swing.BoxLayout;
-import java.awt.GridLayout;
-import java.awt.CardLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.Box;
-import javax.swing.JSeparator;
 import javax.swing.border.TitledBorder;
 
-import filtros.FiltroTarGz;
+
 import servicos.ServicoDescompactador;
 
 import java.awt.Color;
