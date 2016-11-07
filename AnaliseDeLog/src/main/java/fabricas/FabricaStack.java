@@ -1,5 +1,6 @@
 package fabricas;
 
+
 import entidades.EntidadeStack;
 
 public class FabricaStack {

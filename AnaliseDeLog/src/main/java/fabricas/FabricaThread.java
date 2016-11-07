@@ -1,5 +1,6 @@
 package fabricas;
 
+
 import entidades.EntidadeThread;
 
 public class FabricaThread {
@@ -12,5 +13,4 @@ public class FabricaThread {
 	public EntidadeThread criarThread (int pid, String username, String cpu, String process, int lwpid){
 		return EntidadeThread.criarThread(pid, username, cpu, process, lwpid);
 	}
-
 }
