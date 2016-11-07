@@ -17,10 +17,11 @@ import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 
 public class ServicoDescompactador {
 
-	public void extrairLogs(String caminho, List<String> arquivos){
+	public File extrairLogs(String caminho, List<String> arquivos){
 		// precisamos criar o dirtorio temporario
+		File localDestino = null;
 		try {
-			File localDestino = createTempDirectory();
+			localDestino = createTempDirectory();
 			for (String nomeDoArquivoInternoAoDiretorio : arquivos) {
 				File arquivoTarGz = new File(caminho, nomeDoArquivoInternoAoDiretorio);
 				try {
@@ -36,6 +37,8 @@ public class ServicoDescompactador {
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		return localDestino;
 	}
 
 	private static File createTempDirectory() throws IOException {
