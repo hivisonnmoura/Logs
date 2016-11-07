@@ -16,8 +16,12 @@ import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 
 public class ServicoDescompactador {
+	
+	public void extrairLogs(String caminho, List<String> arquivos){
+		// precisamos criar o dirtorio temporario
+	}
 
-	public void extrairTarGz(File arquivoTarGz, File localDestino) throws IOException, ArchiveException {
+	private void extrairTarGz(File arquivoTarGz, File localDestino) throws IOException, ArchiveException {
 
 		File arquivoTar = unGzip(arquivoTarGz, localDestino);
 		unTar(arquivoTar, localDestino);
@@ -26,7 +30,7 @@ public class ServicoDescompactador {
 		}
 	}
 
-	public List<File> unTar(File arquivoTar, File localDestino) throws IOException, ArchiveException {
+	private List<File> unTar(File arquivoTar, File localDestino) throws IOException, ArchiveException {
 
 		List<File> untaredFiles = new LinkedList<File>();
 		InputStream inputStream = new FileInputStream(arquivoTar);
@@ -58,7 +62,7 @@ public class ServicoDescompactador {
 		return untaredFiles;
 	}
 
-	public File unGzip(final File arquivoGz, final File localDestino) throws IOException {
+	private File unGzip(final File arquivoGz, final File localDestino) throws IOException {
 
 		File outputFile = new File(localDestino, arquivoGz.getName().substring(0, arquivoGz.getName().length() - 3));
 		GZIPInputStream gzipInputStream = new GZIPInputStream(new FileInputStream(arquivoGz));
