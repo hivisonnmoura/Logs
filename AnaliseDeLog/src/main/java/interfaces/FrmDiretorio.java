@@ -14,13 +14,14 @@ import javax.swing.border.TitledBorder;
 
 
 import servicos.ServicoDescompactador;
+import servicos.ServicoFachada;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class FrmDiretorio extends JFrame {
-
+	ServicoFachada servicoFachada = new ServicoFachada();
 	/**
 	 * 
 	 */
@@ -99,8 +100,11 @@ public class FrmDiretorio extends JFrame {
 						}
 
 					}
-					ServicoDescompactador aux = new ServicoDescompactador();
-					aux.extrairLogs(caminho, ListaArquivo);
+					
+					 servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
+					
+					
+					
 			
 					 // MetodoDescompactar(arquivo.getAbsolutePath(),ListaArquivo);
 				}
