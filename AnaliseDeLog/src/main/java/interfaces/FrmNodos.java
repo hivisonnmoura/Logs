@@ -47,7 +47,7 @@ public class FrmNodos extends JFrame {
 	public FrmNodos() {
 		setTitle("Logz - Resumo de pontos cr\u00EDticos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 460, 369);
+		setBounds(100, 100, 512, 397);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
