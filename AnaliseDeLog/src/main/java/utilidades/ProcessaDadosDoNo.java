@@ -37,10 +37,10 @@ public class ProcessaDadosDoNo {
 			String[] noAtributoData = file1.split("_");
 			String nomeNo = noAtributoData[1];
 			String dataNo = noAtributoData[2];
-		    System.out.println(nomeNo+" "+dataNo);
+		    //System.out.println(nomeNo+" "+dataNo);
 			 String diretorio = diretorioDoTemp.concat("\\").concat(file1);
 					 
-		     System.out.println(diretorio);
+		     //System.out.println(diretorio);
 		  processaDadosCPU.processaDiretorioDoNo(diretorio,nomeNo);
 		     
 		     
