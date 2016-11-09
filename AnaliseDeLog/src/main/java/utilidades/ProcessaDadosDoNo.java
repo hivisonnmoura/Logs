@@ -1,9 +1,6 @@
 package utilidades;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c0a27c84f6508a298647f4c7316cff22c620df53
 import java.io.File;
 
 public class ProcessaDadosDoNo {
