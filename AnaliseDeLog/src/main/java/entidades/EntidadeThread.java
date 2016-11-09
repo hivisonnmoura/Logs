@@ -7,7 +7,6 @@ public class EntidadeThread {
 	private String process;
 	private int lwpid;
 
-
 	private EntidadeThread(int pid, String username, String cpu, String process, int lwpid) {
 
 		this.pid = pid;
@@ -17,11 +16,9 @@ public class EntidadeThread {
 		this.lwpid = lwpid;
 	}
 
-	
-	public static EntidadeThread criarThread(int pid, String username, String cpu, String process, int lwpid){
-		return new EntidadeThread(pid, username, cpu, process, lwpid);		
+	public static EntidadeThread criarThread(int pid, String username, String cpu, String process, int lwpid) {
+		return new EntidadeThread(pid, username, cpu, process, lwpid);
 	}
-
 
 	public int getPid() {
 		return pid;
@@ -64,4 +61,3 @@ public class EntidadeThread {
 	}
 
 }
-

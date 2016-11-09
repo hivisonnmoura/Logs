@@ -21,6 +21,9 @@ import servicos.ServicoFachada;
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class FrmNodos extends JFrame {
 
@@ -29,6 +32,8 @@ public class FrmNodos extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private DadoTableModel tableModel;
+	
+	ServicoFachada servicoFachada = new ServicoFachada();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -44,10 +49,12 @@ public class FrmNodos extends JFrame {
 	}
 
 	public FrmNodos() {
+		setResizable(false);
 		setTitle("Logz - Resumo de pontos cr\u00EDticos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 460, 369);
+		setBounds(100, 100, 520, 402);
 		contentPane = new JPanel();
+		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -56,11 +63,11 @@ public class FrmNodos extends JFrame {
 		panelPlanilha.setLayout(null);
 		panelPlanilha.setBorder(new TitledBorder(null, "Relatório dos pontos críticos", TitledBorder.LEADING,
 				TitledBorder.TOP, null, null));
-		panelPlanilha.setBounds(60, 129, 394, 181);
+		panelPlanilha.setBounds(55, 144, 394, 164);
 		contentPane.add(panelPlanilha);
 
 		tableNodosCriticos = new JTable();
-		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(ServicoFachada.getNodos())));
+		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.inserirDados())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
@@ -69,23 +76,29 @@ public class FrmNodos extends JFrame {
 		
 
 		JButton btnPrximo = new JButton("Pr\u00F3ximo");
-		btnPrximo.setBounds(365, 318, 89, 23);
+		btnPrximo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnPrximo.setBounds(360, 319, 89, 23);
 		contentPane.add(btnPrximo);
 
 		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		comboBox.setToolTipText("");
 		comboBox.setMaximumRowCount(3);
 		comboBox.setBackground(Color.WHITE);
-		comboBox.setBounds(221, 4, 94, 20);
+		comboBox.setBounds(242, 24, 112, 18);
 		contentPane.add(comboBox);
 
 		JLabel lblSelecioneOHorrio = new JLabel("Seleciona a data:");
-		lblSelecioneOHorrio.setBounds(109, 6, 206, 14);
+		lblSelecioneOHorrio.setBounds(135, 26, 112, 14);
 		contentPane.add(lblSelecioneOHorrio);
 
 		JPanel panel = new JPanel();
 		panel.setBorder(
 				new TitledBorder(null, "Filtro de horário", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(142, 34, 231, 82);
+		panel.setBounds(127, 51, 231, 82);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
