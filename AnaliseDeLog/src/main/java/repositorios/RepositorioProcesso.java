@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import entidades.EntidadeProcesso;
 
 public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso> {
-	ArrayList<EntidadeProcesso> processo = new ArrayList<EntidadeProcesso>();
+	ArrayList<EntidadeProcesso> processos = new ArrayList<EntidadeProcesso>();
 
 	public ArrayList<EntidadeProcesso> select(EntidadeProcesso processo) {
 		return select(processo);
 	}
 
 	public void insert(EntidadeProcesso processo) {
-		this.processo.add(processo);
+		this.processos.add(processo);
 
 	}
 
@@ -20,12 +20,14 @@ public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso
 		return null;
 	}
 
+	
 	public ArrayList<EntidadeProcesso> findall() {
 		
-		return this.processo;
+		return this.processos;
 	}
 
-	public EntidadeProcesso find(EntidadeProcesso obj) {
+	
+	public EntidadeProcesso find(EntidadeProcesso processo) {
 
 		return null;
 	}

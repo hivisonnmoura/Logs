@@ -2,11 +2,16 @@ package entidades;
 
 public class EntidadeStack {
 	private String pidHexa;
-	private String stack;
+
+	private String descricao;
 	
-	public EntidadeStack(String pidHexa, String stack) {
+	private EntidadeStack(String pidHexa, String descricao) {
 		this.pidHexa = pidHexa;
-		this.stack = stack;
+		this.descricao = descricao;
+	}
+	
+	public static EntidadeStack criarStack(String pidHexa, String descricao){
+		return new EntidadeStack(pidHexa, descricao);
 	}
 
 	public String getPidHexa() {
@@ -18,15 +23,9 @@ public class EntidadeStack {
 	}
 
 	public String getStack() {
-		return stack;
+
+		return descricao;
 	}
 
-	public void setStack(String stack) {
-		this.stack = stack;
-	}
-	
-	
-	
-	
 }
 

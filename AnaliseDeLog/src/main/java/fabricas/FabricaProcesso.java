@@ -3,12 +3,15 @@ package fabricas;
 import entidades.EntidadeProcesso;
 
 public class FabricaProcesso {
-	public FabricaProcesso(){
+	private FabricaProcesso(){
 		
 	}
-	public EntidadeProcesso CriarProcesso(int pid, String username, String time, String cpu, int nlwp, String process){
+	public static FabricaProcesso nova(){
+		return new FabricaProcesso();
+	}
+	public EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process){
 		
-		return EntidadeProcesso.CriarProcesso(pid, username, time, cpu, nlwp, process);
+		return EntidadeProcesso.criarProcesso(pid, username, time, cpu, nlwp, process);
 		
 	}
 }

@@ -1,3 +1,4 @@
+
 package entidades;
 
 public class EntidadeProcesso {
@@ -18,7 +19,7 @@ public class EntidadeProcesso {
 		this.process = process;
 	}
 	
-	public static EntidadeProcesso CriarProcesso(int pid, String username, String time, String cpu, int nlwp, String process){
+	public static EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process){
 		
 		return new EntidadeProcesso(pid,username,time,cpu,nlwp,process);
 	}

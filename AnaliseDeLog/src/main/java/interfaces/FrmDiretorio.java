@@ -1,9 +1,7 @@
 package interfaces;
 
-import java.awt.BorderLayout;
 import javax.swing.JFileChooser;
 import java.awt.EventQueue;
-import java.awt.Frame;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +21,10 @@ import java.awt.event.ActionEvent;
 
 public class FrmDiretorio extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtInserirDiretrio;
 	private JPanel panel;
