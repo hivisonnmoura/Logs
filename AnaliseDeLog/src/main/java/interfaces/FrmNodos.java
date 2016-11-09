@@ -16,6 +16,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.table.DefaultTableModel;
 
 import objetodevalor.OVNoProcesso;
+import servicos.ServicoFachada;
 
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
@@ -59,7 +60,7 @@ public class FrmNodos extends JFrame {
 		contentPane.add(panelPlanilha);
 
 		tableNodosCriticos = new JTable();
-		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.getNodos())));
+		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(ServicoFachada.getNodos())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
