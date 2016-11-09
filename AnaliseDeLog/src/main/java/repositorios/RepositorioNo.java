@@ -39,8 +39,4 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 		return null;
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d864e7eb2bb02af2241e228b5eac59a14db85d89
