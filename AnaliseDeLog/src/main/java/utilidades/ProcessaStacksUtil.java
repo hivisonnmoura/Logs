@@ -12,11 +12,13 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ProcessaStacks {
+public class ProcessaStacksUtil {
 	
 	public static void main(String[] args) {
 		String caminhoDaStack = "/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/ResultDumps_cmpsczeus07_10-20_1822.log";
-		String hexadecimalDaStack = "0x82c";
+		int processoDecimal = 2002;
+		String hexadecimalDaStack = "0x"+Integer.toHexString(processoDecimal);
+		
 		processaStack(caminhoDaStack, hexadecimalDaStack);
 	}
 	
@@ -39,18 +41,18 @@ public class ProcessaStacks {
 
 		stringContatenaTexto = String.join("\n", listaAuxiliar);
 
-		String[] arrayDivideSatckEmBlocos= stringContatenaTexto.split("\n\n");
+		String[] arrayDivideStackEmBlocos= stringContatenaTexto.split("\n\n");
 
-		for (int i = 1; i < (arrayDivideSatckEmBlocos.length - 1); i++) {
-			listaDeStacks.add(arrayDivideSatckEmBlocos[i]);
+		for (int i = 1; i < (arrayDivideStackEmBlocos.length - 1); i++) {
+			listaDeStacks.add(arrayDivideStackEmBlocos[i]);
 		}
 
 		/*
 		 * Limpa variáveis temporárias
 		 */
 		listaAuxiliar.clear();
-		arrayDivideSatckEmBlocos = null;
-		System.gc();
+		arrayDivideStackEmBlocos = null;
+		
 
 		/*
 		 * Criando HashMap
