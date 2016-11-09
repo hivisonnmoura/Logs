@@ -1,5 +1,9 @@
 package utilidades;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d864e7eb2bb02af2241e228b5eac59a14db85d89
 
 import java.io.File;
 import java.util.ArrayList;
