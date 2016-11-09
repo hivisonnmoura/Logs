@@ -24,6 +24,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.ListSelectionModel;
 
 public class FrmNodos extends JFrame {
 
@@ -58,6 +59,8 @@ public class FrmNodos extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		setLocationRelativeTo(null);
 
 		JPanel panelPlanilha = new JPanel();
 		panelPlanilha.setLayout(null);
@@ -67,6 +70,7 @@ public class FrmNodos extends JFrame {
 		contentPane.add(panelPlanilha);
 
 		tableNodosCriticos = new JTable();
+		tableNodosCriticos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.inserirDados())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
@@ -78,6 +82,15 @@ public class FrmNodos extends JFrame {
 		JButton btnPrximo = new JButton("Pr\u00F3ximo");
 		btnPrximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+				//carregar a linha selecionada
+				//carregar threads com a linha selecionada
+				//chamar a tela 3
+				FrmStack telaTres = new FrmStack();
+				telaTres.setVisible(true);
+				setVisible(false);
+				
+				
 			}
 		});
 		btnPrximo.setBounds(360, 319, 89, 23);
