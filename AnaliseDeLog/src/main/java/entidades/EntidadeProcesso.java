@@ -9,19 +9,21 @@ public class EntidadeProcesso {
 	private String cpu;
 	private int nlwp;
 	private String process;
+	private String hora;
 
-	private EntidadeProcesso(int pid, String username, String time, String cpu, int nlwp, String process) {
+	private EntidadeProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora) {
 		this.pid = pid;
 		this.username = username;
 		this.time = time;
 		this.cpu = cpu;
 		this.nlwp = nlwp;
 		this.process = process;
+		this.hora = hora;
 	}
 	
-	public static EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process){
+	public static EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora){
 		
-		return new EntidadeProcesso(pid,username,time,cpu,nlwp,process);
+		return new EntidadeProcesso(pid,username,time,cpu,nlwp,process,hora);
 	}
 	
 
@@ -71,6 +73,14 @@ public class EntidadeProcesso {
 
 	public void setProcess(String process) {
 		this.process = process;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 
 }
