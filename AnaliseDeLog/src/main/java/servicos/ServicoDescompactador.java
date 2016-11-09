@@ -26,10 +26,10 @@ public class ServicoDescompactador {
 				try {
 					this.extrairTarGz(arquivoTarGz, localDestino);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				} catch (ArchiveException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 			}
