@@ -49,11 +49,12 @@ public class ProcessaCpuProcess {
 		int nlwp = Integer.parseInt(quebraNlwp[1]); 
 		String process = quebraNlwp[0];
 		String time = cpuProcessDados[8];
+		String diretorio = pastaFinal.getAbsolutePath();
 		
 		
-		EntidadeProcesso processo = new EntidadeProcesso(pid, username, time, cpu, nlwp, process, hora);
+		EntidadeProcesso processo = new EntidadeProcesso(pid, username, time, cpu, nlwp, process, hora, diretorio);
 		ServicoProcesso servicoProcesso = new ServicoProcesso();
-		servicoProcesso.solicitarCriacaoProcesso(pid, username, time, cpu, nlwp, process, hora);
+		servicoProcesso.solicitarCriacaoProcesso(pid, username, time, cpu, nlwp, process, hora, diretorio);
 		
 		
 		

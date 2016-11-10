@@ -14,18 +14,12 @@ import java.util.stream.Stream;
 
 public class ProcessaStacksUtil {
 	
-	public static void main(String[] args) {
-		String caminhoDaStack = "/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/ResultDumps_cmpsczeus07_10-20_1822.log";
-		int processoDecimal = 2002;
-		String hexadecimalDaStack = "0x"+Integer.toHexString(processoDecimal);
-		
-		processaStack(caminhoDaStack, hexadecimalDaStack);
-	}
-	
-	public static void processaStack(String caminhoDaStack, String hexadecimalDaStack){
-	
+
+	public static List<String> processaStack(String caminhoDaStack, int decimal){
+		String hexaDecimal = "0x"+Integer.toHexString(decimal);
 		String stringContatenaTexto;
 
+		List<String> blocoStack = new ArrayList<>();
 		List<String> listaAuxiliar = new ArrayList<>();
 		List<String> listaDeStacks = new ArrayList<>();
 
@@ -89,10 +83,13 @@ public class ProcessaStacksUtil {
 		 */
 		hashMapDasStacks.forEach((k, v) -> {
 
-			if (hexadecimalDaStack.equals(k)) {
-				System.out.println("Key: " + k + "\nStack: " + v);
+			if (hexaDecimal.equals(k)) {
+			blocoStack.addAll(v);
 			}
 		});
+		
+		
+		return blocoStack;
 	}
 	
 }
