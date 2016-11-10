@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 import servicos.ServicoDescompactador;
+import servicos.ServicoFachada;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -98,8 +99,10 @@ public class FrmDiretorio extends JFrame {
 						}
 
 					}
-					ServicoDescompactador aux = new ServicoDescompactador();
-					aux.extrairLogs(caminho, ListaArquivo);
+					
+					ServicoFachada servicoFachada = new ServicoFachada();
+					servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
+					
 
 				}
 			}
