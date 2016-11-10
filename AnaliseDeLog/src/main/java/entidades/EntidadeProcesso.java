@@ -10,8 +10,9 @@ public class EntidadeProcesso {
 	private int nlwp;
 	private String process;
 	private String hora;
+	private String diretorio;
 
-	public EntidadeProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora) {
+	public EntidadeProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora, String diretorio) {
 		this.pid = pid;
 		this.username = username;
 		this.time = time;
@@ -19,11 +20,12 @@ public class EntidadeProcesso {
 		this.nlwp = nlwp;
 		this.process = process;
 		this.hora = hora;
+		this.diretorio = diretorio;
 	}
 	
-	public static EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora){
+	public static EntidadeProcesso criarProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora, String diretorio){
 		
-		return new EntidadeProcesso(pid,username,time,cpu,nlwp,process,hora);
+		return new EntidadeProcesso(pid,username,time,cpu,nlwp,process,hora, diretorio);
 	}
 	
 
@@ -33,6 +35,14 @@ public class EntidadeProcesso {
 
 	public void setPid(int pid) {
 		this.pid = pid;
+	}
+
+	public String getDiretorio() {
+		return diretorio;
+	}
+
+	public void setDiretorio(String diretorio) {
+		this.diretorio = diretorio;
 	}
 
 	public String getUsername() {

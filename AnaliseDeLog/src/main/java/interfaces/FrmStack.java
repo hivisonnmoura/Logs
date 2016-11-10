@@ -104,6 +104,8 @@ import javax.swing.JComboBox;
 import javax.swing.JTextPane;
 import javax.swing.border.TitledBorder;
 
+import entidades.EntidadeThread;
+import servicos.ServicoFachada;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -122,10 +124,7 @@ import java.awt.event.TextEvent;
 public class FrmStack extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
+	ServicoFachada servicoFachada = new ServicoFachada();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -162,6 +161,12 @@ public class FrmStack extends JFrame {
 		
 		
 		JComboBox comboBox = new JComboBox();
+		for (EntidadeThread thread : servicoFachada.buscarTodosObjetosRepositorioThread()) {
+			String listaThreadComboBox = thread.getCpu().toString()+" - "+ Integer.toString(thread.getLwpid());
+			comboBox.addItem(listaThreadComboBox);
+		}
+		
+		comboBox.setSelectedIndex(-1);
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

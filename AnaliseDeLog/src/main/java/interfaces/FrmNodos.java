@@ -22,6 +22,7 @@ import entidades.EntidadeNo;
 import objetodevalor.OVNoProcesso;
 import repositorios.RepositorioNo;
 import servicos.ServicoFachada;
+import utilidades.ProcessaDadosCpuDetalhado;
 
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
@@ -32,6 +33,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.ScrollPaneConstants;
+import java.awt.event.MouseAdapter;
 
 public class FrmNodos extends JFrame {
 
@@ -84,8 +86,7 @@ public class FrmNodos extends JFrame {
 		scrollPane.setViewportView(tableNodosCriticos);
 		servicoFachada.retornaListaEntidadeNo().forEach(System.out::println);
 		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
-		
-		
+
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
@@ -93,6 +94,18 @@ public class FrmNodos extends JFrame {
 		JButton btnPrximo = new JButton("Pr\u00F3ximo");
 		btnPrximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+
+				ProcessaDadosCpuDetalhado cpuDetalhado = new ProcessaDadosCpuDetalhado();
+				servicoFachada servicoFachada = new 
+				String CaminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
+				String CaminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(CaminhoDiretorio);
+				
+				//receber uma arraylist do ernesto
+				
+
+				// FrmStack frmTres = new FrmStack();
+				// frmTres.setVisible(true);
+				// setVisible(false);
 			}
 		});
 		btnPrximo.setBounds(472, 377, 89, 23);

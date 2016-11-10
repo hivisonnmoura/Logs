@@ -13,7 +13,7 @@ public class DadoTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	private List<OVNoProcesso> dados;
 	private String[] colunas = { "Nome do No", "Data do No", "PID", "Username", "Time", "CPU", "NLWP", "Process",
-			"Hora do Processo" };
+			"Hora do Processo", "nome do arquivo" };
 
 	public DadoTableModel(List<OVNoProcesso> ov) {
 		dados = ov;
@@ -66,6 +66,8 @@ public class DadoTableModel extends AbstractTableModel {
 			return dados.get(linha).getProcess();
 		case 8:
 			return dados.get(linha).getHoraDoProcesso();
+		case 9:
+			return dados.get(linha).getDiretorio();
 
 		}
 		return null;
