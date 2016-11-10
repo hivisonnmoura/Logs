@@ -14,59 +14,61 @@ public class ProcessaCpuProcess {
 		BufferedReader br = null;
 		String[] cpuProcessDados;
 		String linhaCpuProcess = null;
-		String caminhoDoArquivo = pastaFinal.getAbsolutePath();
+		String caminhoDoArquivo;
 
-		caminhoDoArquivo = caminhoDoArquivo.replace("\\", "\\\\");
-		// System.out.println(caminhoDoArquivo);
-		String[] nomePartes = caminhoDoArquivo.split("\\\\");
-		String dadosCpuProcess = nomePartes[nomePartes.length - 1];
+		caminhoDoArquivo = pastaFinal.getName();
+		System.out.println(caminhoDoArquivo);
+	//	String dadosCpuProcess = nomePartes[nomePartes.length - 1];
 
-		String[] cpuProcessAtributos = dadosCpuProcess.split("_");
+		String[] cpuProcessAtributos = caminhoDoArquivo.split("_");
 
 		cpuProcessAtributos[3] = tratarHora(cpuProcessAtributos);
 
+		
+
 		try {
-			br = new BufferedReader(new FileReader(caminhoDoArquivo));
+			br = new BufferedReader(new FileReader(pastaFinal));
 
 			linhaCpuProcess = br.readLine();
 			linhaCpuProcess = br.readLine();
-			// System.out.println(linhaCpuProcess);
+			//System.out.println(linhaCpuProcess);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
-
-		cpuProcessDados = linhaCpuProcess.split("\\s+");// vetor da linha do cpu
-														// process
-		cpuProcessDados[0] = cpuProcessAtributos[3];// posicao valor da hora do
-													// processo
-
-		/*
-		 * setar atributos pelo vetor do cpuProcesse em um objeto do tipo
-		 * Processo
-		 */
-
+		
+		cpuProcessDados = linhaCpuProcess.split("\\s+");// vetor da linha do cpu process
+		cpuProcessDados[0] = cpuProcessAtributos[3];// posicao valor da hora do processo
+		
+		/* setar atributos pelo vetor do cpuProcesse em um objeto do tipo Processo*/
+		
+		
+		
 		int pid = Integer.parseInt(cpuProcessDados[1]);
 		String username = cpuProcessDados[2];
-		String time = cpuProcessDados[0];
+		String hora = cpuProcessDados[0];
 		String cpu = cpuProcessDados[8];
 		String[] quebraNlwp = cpuProcessDados[10].split("/");
-		int nlwp = Integer.parseInt(quebraNlwp[1]);
+		int nlwp = Integer.parseInt(quebraNlwp[1]); 
 		String process = quebraNlwp[0];
-
-		EntidadeProcesso processo = new EntidadeProcesso(pid, username, time, cpu, nlwp, process,hora);
+		String time = cpuProcessDados[7];
+		
+		
+		EntidadeProcesso processo = new EntidadeProcesso(pid, username, time, cpu, nlwp, process, hora);
 		ServicoProcesso servicoProcesso = new ServicoProcesso();
 		servicoProcesso.solicitarCriacaoProcesso(pid, username, time, cpu, nlwp, process, hora);
-
-		// System.out.println(processo.getPid()+processo.getCpu() );
-
+		
+		
+		
+		 //System.out.println(processo.getPid()+processo.getCpu() );
+		 
 		return processo; // retorna vetor de dados CPU process para a
-							// tabela
+								// tabela
 	}
 
 	private static String tratarHora(String[] ajustaHoraComDivisao) {
 		String ajustaHora = new String();
 		ajustaHora = ajustaHoraComDivisao[3];
-		ajustaHora = new StringBuffer(ajustaHora).insert(2, ":").delete(5, 9).toString();
+		ajustaHora = new StringBuffer(ajustaHora).insert(2, ":").delete(5,9).toString();
 		return ajustaHora;
 	}
 }

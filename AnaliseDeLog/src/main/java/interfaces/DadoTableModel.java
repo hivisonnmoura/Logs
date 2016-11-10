@@ -1,5 +1,7 @@
 package interfaces;
 
+import objetodevalor.OVNoProcesso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,16 +9,14 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
-import objetodevalor.OVNoProcesso;
-
 public class DadoTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	private List<OVNoProcesso> dados;
 	private String[] colunas = { "Nome do No", "Data do No", "PID", "Username", "Time", "CPU", "NLWP", "Process",
 			"Hora do Processo" };
 
-	public DadoTableModel(List<OVNoProcesso> ov) {
-		dados = ov;
+	public DadoTableModel(List<OVNoProcesso> list) {
+		dados = new ArrayList<OVNoProcesso>();
 
 		this.addTableModelListener(new TableModelListener() {
 
@@ -74,5 +74,5 @@ public class DadoTableModel extends AbstractTableModel {
 	public OVNoProcesso get(int linha) {
 		return this.dados.get(linha);
 	}
-
+	
 }

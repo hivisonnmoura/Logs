@@ -38,7 +38,7 @@ public class OVNoProcesso {
 	public static List<OVNoProcesso> criarCom(List<EntidadeNo> no) {
 		List<OVNoProcesso> listaDeRetorno = new ArrayList<OVNoProcesso>();
 		for (EntidadeNo entidadeNo : no) {
-			ArrayList<EntidadeProcesso> processos = entidadeNo.getProcessos();
+			List<EntidadeProcesso> processos = entidadeNo.getProcessos();
 			for (EntidadeProcesso entidadeProcesso : processos) {
 				OVNoProcesso ovnoprocesso = new OVNoProcesso(entidadeNo.getNome(), entidadeNo.getData(),
 						entidadeProcesso.getPid(), entidadeProcesso.getUsername(), entidadeProcesso.getTime(),

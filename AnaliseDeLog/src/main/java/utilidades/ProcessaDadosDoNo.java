@@ -2,8 +2,6 @@ package utilidades;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
-
 import entidades.EntidadeProcesso;
 import servicos.ServicoNo;
 
@@ -24,9 +22,10 @@ public class ProcessaDadosDoNo {
 			String[] noAtributoData = file1.split("_");
 			String nomeNo = noAtributoData[1];
 			String dataNo = noAtributoData[2];
-			String diretorio = diretorioDoTemp.concat("\\").concat(file1);
+			String diretorio = diretorioDoTemp.concat(File.separator).concat(file1);
 			processaDadosCPU.processaDiretorioDoNo(diretorio, nomeNo, dataNo);
 		}
 	}
 
 }
+

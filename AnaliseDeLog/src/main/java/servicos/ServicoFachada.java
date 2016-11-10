@@ -1,5 +1,6 @@
 package servicos;
 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,34 +8,41 @@ import java.util.List;
 import entidades.EntidadeNo;
 import entidades.EntidadeProcesso;
 import utilidades.ProcessaDadosDoNo;
-import servicos.ServicoNo;
 
 public class ServicoFachada {
 
 	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
+
 	ServicoNo servicoNo = new ServicoNo();
 	ServicoProcesso servicoProcesso = new ServicoProcesso();
-
-	// static ServicoInterpretador servicoInterpretador = new
-	// ServicoInterpretador();
-
-	public static void ServicoFachada() {
+	
+	
+	//static ServicoInterpretador servicoInterpretador = new ServicoInterpretador();
+	
+	public static void ServicoFachada(){
+		
 
 	}
-
-	public File solicitarServicoDescompactador(String caminho, List<String> ListaArquivo) {
+	
+	public File solicitarServicoDescompactador(String caminho, List<String> ListaArquivo ){
 		File file = servicoDescompactador.extrairLogs(caminho, ListaArquivo);
-		System.out.println(file.getAbsolutePath());
+
 		solicitarProcessaDadosDoNo(file);
 		return file;
 	}
-
-	public void solicitarProcessaDadosDoNo(File caminhoTemp) {
+	
+	
+	public void solicitarProcessaDadosDoNo(File caminhoTemp ){
 		processaDadosDoNo.processaDiretorio(caminhoTemp);
-		// pegar retorno para criar objeto
+		//pegar retorno para criar objeto
 	}
 
+//	public static List<EntidadeNo> getNodos() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+	
 	public List<EntidadeNo> inserirDados() {
 
 		ArrayList<EntidadeProcesso> processos1 = new ArrayList<EntidadeProcesso>();
@@ -62,3 +70,7 @@ public class ServicoFachada {
 		
 	}
 }
+
+ 
+
+

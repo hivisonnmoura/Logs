@@ -1,6 +1,7 @@
 package fabricas;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import entidades.EntidadeNo;
 import entidades.EntidadeProcesso;
@@ -15,7 +16,7 @@ public class FabricaNo {
 		return new FabricaNo();
 	}
 
-	public EntidadeNo criarNo(String nome, String data, ArrayList<EntidadeProcesso> processos) {
+	public EntidadeNo criarNo(String nome, String data, List<EntidadeProcesso> processos) {
 		return EntidadeNo.criarNo(nome, data, processos);
 	}
 
