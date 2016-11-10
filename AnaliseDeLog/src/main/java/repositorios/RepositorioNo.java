@@ -1,12 +1,13 @@
 package repositorios;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import entidades.EntidadeNo;
 
 public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
-	ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
-
+	static ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
+	
 	public ArrayList<EntidadeNo> select(EntidadeNo no) {
 		return select(no);
 	}
@@ -21,7 +22,8 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	}
 
 	public void insert(EntidadeNo no) {
-		this.nos.add(no);
+		nos.add(no);
+		
 	}
 
 	public ArrayList<EntidadeNo> delete() {
@@ -30,13 +32,14 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	}
 
 	public ArrayList<EntidadeNo> findall() {
-
-		return null;
+		nos.forEach(System.out::println);
+		return nos;
 	}
 
 	public EntidadeNo find(EntidadeNo no) {
 
 		return null;
 	}
+	
 
 }

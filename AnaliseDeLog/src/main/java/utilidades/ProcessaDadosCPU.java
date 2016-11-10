@@ -30,7 +30,7 @@ public class ProcessaDadosCPU {
 		}
 		
 		for (String file : resposta) {
-			List<EntidadeProcesso> listaProcesso = new ArrayList<EntidadeProcesso>();
+			ArrayList<EntidadeProcesso> listaProcesso = new ArrayList<EntidadeProcesso>();
 					
 			String diretorioFinal = caminho.concat(File.separator).concat(file);
 			File pastaFinal = new File(diretorioFinal);

@@ -45,6 +45,7 @@ public class OVNoProcesso {
 						entidadeProcesso.getCpu(), entidadeProcesso.getNlwp(), entidadeProcesso.getProcess(),
 						entidadeProcesso.getHora());
 				listaDeRetorno.add(ovnoprocesso);
+				
 			}
 		}
 

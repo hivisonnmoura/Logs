@@ -102,7 +102,9 @@ public class FrmDiretorio extends JFrame {
 					
 					ServicoFachada servicoFachada = new ServicoFachada();
 					servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
-					
+					FrmNodos formDois = new FrmNodos();
+					formDois.setVisible(true);
+					setVisible(false);
 
 				}
 			}
