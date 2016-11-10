@@ -2,7 +2,7 @@ package utilidades;
 
 public class StackNovaDoLog {
 	public String valor;
-	
+
 	private StackNovaDoLog(String valor) {
 		this.valor = valor;
 	}

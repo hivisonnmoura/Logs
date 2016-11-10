@@ -10,7 +10,9 @@ public class MotorDeLeituraDoArquivoDeLog {
 
 	public Map<String, List<StackNovaDoLog>> leiaOArquivoECarregueTudoNoMapa() {
 		int registroNoArquivoTexto = 0;
-		while (registroNoArquivoTexto <= 10) {// aqui sao as linhas do arquivo, ou enquanto nao chega o fim do arquivo ;)
+		while (registroNoArquivoTexto <= 10) {// aqui sao as linhas do arquivo,
+												// ou enquanto nao chega o fim
+												// do arquivo ;)
 			String chave = "0xbd4a";
 			String stackQueVeioDoArquivoTexto = "LDAPConnThread-19194 ldaps://cmpdc06.elektro.com.br:389 daemon prio=3 tid=0x000000012b1e7000 nid=0xbd47 runnable [0xffffffff436ff000]"
 					+ "java.lang.Thread.State: RUNNABLE" + "at java.net.SocketInputStream.socketRead0(Native Method)"
@@ -31,7 +33,7 @@ public class MotorDeLeituraDoArquivoDeLog {
 
 	private void poeNoMapa(String chave, String stackQueVeioDoArquivoTexto) {
 		List<StackNovaDoLog> doLogs;
-		
+
 		// Processei o arquivo texto
 		StackNovaDoLog stackNovaDoLog = StackNovaDoLog.novo(stackQueVeioDoArquivoTexto);
 		if (mapa.containsKey(chave)) {

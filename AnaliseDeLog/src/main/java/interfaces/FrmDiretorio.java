@@ -12,7 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-
 import servicos.ServicoDescompactador;
 import servicos.ServicoFachada;
 
@@ -21,7 +20,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class FrmDiretorio extends JFrame {
-	ServicoFachada servicoFachada = new ServicoFachada();
+
 	/**
 	 * 
 	 */
@@ -52,22 +51,24 @@ public class FrmDiretorio extends JFrame {
 	public FrmDiretorio() {
 		setTitle("Logz");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(500, 300, 350, 300);
+		setBounds(500, 300, 444, 339);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		setLocationRelativeTo(null);
 
 		panel = new JPanel();
 		panel.setBorder(
 				new TitledBorder(null, "Selecionar o Diretorio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(10, 90, 320, 47);
+		panel.setBounds(10, 90, 408, 47);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
 		txtInserirDiretrio = new JTextField();
 		txtInserirDiretrio.setForeground(Color.LIGHT_GRAY);
-		txtInserirDiretrio.setBounds(6, 17, 221, 20);
+		txtInserirDiretrio.setBounds(6, 17, 285, 20);
 		panel.add(txtInserirDiretrio);
 		txtInserirDiretrio.setText("C:\\logs");
 		txtInserirDiretrio.setColumns(10);
@@ -80,14 +81,12 @@ public class FrmDiretorio extends JFrame {
 				file.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 				int i = file.showSaveDialog(null);
 				if (i == 1) {
-					// JtextFieldLocal.setText("");
+
 				} else {
 
 					File arquivo = file.getSelectedFile();
 					String caminho = arquivo.toString();
-					// File[] qtdArquivos = arquivo.listFiles();
 
-					// int cont = 0;
 					List<String> ListaArquivo = new ArrayList<String>();
 
 					for (File f : arquivo.listFiles()) {
@@ -101,16 +100,14 @@ public class FrmDiretorio extends JFrame {
 
 					}
 					
-					 servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
+					ServicoFachada servicoFachada = new ServicoFachada();
+					servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
 					
-					
-					
-			
-					 // MetodoDescompactar(arquivo.getAbsolutePath(),ListaArquivo);
+
 				}
 			}
 		});
-		btnLocalizar.setBounds(237, 16, 73, 23);
+		btnLocalizar.setBounds(301, 16, 97, 23);
 		panel.add(btnLocalizar);
 	}
 }

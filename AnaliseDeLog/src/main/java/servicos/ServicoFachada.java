@@ -38,14 +38,11 @@ public class ServicoFachada {
 		//pegar retorno para criar objeto
 	}
 
-//	public static List<EntidadeNo> getNodos() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+
 	
 	public List<EntidadeNo> inserirDados() {
 
-		ArrayList<EntidadeProcesso> processos1 = new ArrayList<EntidadeProcesso>();
+		List<EntidadeProcesso> processos1 = new ArrayList<EntidadeProcesso>();
 
 		EntidadeProcesso processo1 = servicoProcesso.solicitarCriacaoProcesso(12, "sds", "çaça", "sdsd", 1, "sdsds","sdsd");
 		EntidadeProcesso processo2 = servicoProcesso.solicitarCriacaoProcesso(12, "sds", "çaça", "sdsd", 1, "sdsds","sdsd");
@@ -65,9 +62,8 @@ public class ServicoFachada {
 		listanodos.add(no1);
 		listanodos.add(no2);
 		listanodos.add(no3);
-		
+	
 		return listanodos;
-		
 	}
 }
 
