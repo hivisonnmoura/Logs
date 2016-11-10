@@ -32,7 +32,7 @@ public class ProcessaDadosCPU {
 		for (String file : resposta) {
 			List<EntidadeProcesso> listaProcesso = new ArrayList<EntidadeProcesso>();
 					
-			String diretorioFinal = caminho.concat("\\").concat(file);
+			String diretorioFinal = caminho.concat(File.separator).concat(file);
 			File pastaFinal = new File(diretorioFinal);
 			EntidadeProcesso processo = processaCpuProcess.processaArquivoCpuProcess(pastaFinal);
 			if (!listaProcesso.contains(processo)) {

@@ -14,21 +14,20 @@ public class ProcessaCpuProcess {
 		BufferedReader br = null;
 		String[] cpuProcessDados;
 		String linhaCpuProcess = null;
-		String caminhoDoArquivo = pastaFinal.getAbsolutePath();
+		String caminhoDoArquivo;
 
-		caminhoDoArquivo = caminhoDoArquivo.replace("\\", "\\\\");
-		//System.out.println(caminhoDoArquivo);
-		String[] nomePartes = caminhoDoArquivo.split("\\\\");
-		String dadosCpuProcess = nomePartes[nomePartes.length - 1];
+		caminhoDoArquivo = pastaFinal.getName();
+		System.out.println(caminhoDoArquivo);
+	//	String dadosCpuProcess = nomePartes[nomePartes.length - 1];
 
-		String[] cpuProcessAtributos = dadosCpuProcess.split("_");
+		String[] cpuProcessAtributos = caminhoDoArquivo.split("_");
 
 		cpuProcessAtributos[3] = tratarHora(cpuProcessAtributos);
 
 		
 
 		try {
-			br = new BufferedReader(new FileReader(caminhoDoArquivo));
+			br = new BufferedReader(new FileReader(pastaFinal));
 
 			linhaCpuProcess = br.readLine();
 			linhaCpuProcess = br.readLine();
