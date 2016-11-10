@@ -18,7 +18,9 @@ import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.table.DefaultTableModel;
 
+import entidades.EntidadeNo;
 import objetodevalor.OVNoProcesso;
+import repositorios.RepositorioNo;
 import servicos.ServicoFachada;
 
 import javax.swing.border.LineBorder;
@@ -29,6 +31,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.ScrollPaneConstants;
 
 public class FrmNodos extends JFrame {
 
@@ -79,7 +82,10 @@ public class FrmNodos extends JFrame {
 
 		tableNodosCriticos = new JTable();
 		scrollPane.setViewportView(tableNodosCriticos);
-		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.inserirDados())));
+		servicoFachada.retornaListaEntidadeNo().forEach(System.out::println);
+		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
+		
+		
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);

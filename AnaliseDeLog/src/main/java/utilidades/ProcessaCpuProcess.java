@@ -46,11 +46,11 @@ public class ProcessaCpuProcess {
 		int pid = Integer.parseInt(cpuProcessDados[1]);
 		String username = cpuProcessDados[2];
 		String hora = cpuProcessDados[0];
-		String cpu = cpuProcessDados[8];
+		String cpu = cpuProcessDados[9];
 		String[] quebraNlwp = cpuProcessDados[10].split("/");
 		int nlwp = Integer.parseInt(quebraNlwp[1]); 
 		String process = quebraNlwp[0];
-		String time = cpuProcessDados[7];
+		String time = cpuProcessDados[8];
 		
 		
 		EntidadeProcesso processo = new EntidadeProcesso(pid, username, time, cpu, nlwp, process, hora);
