@@ -2,20 +2,39 @@ package servicos;
 
 
 import java.io.File;
+<<<<<<< HEAD
 import java.util.List;
 
 import entidades.EntidadeNo;
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+import entidades.EntidadeNo;
+import entidades.EntidadeProcesso;
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 import utilidades.ProcessaDadosDoNo;
 
 public class ServicoFachada {
 
 	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
+<<<<<<< HEAD
+=======
+
+	ServicoNo servicoNo = new ServicoNo();
+	ServicoProcesso servicoProcesso = new ServicoProcesso();
+	
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	
 	//static ServicoInterpretador servicoInterpretador = new ServicoInterpretador();
 	
 	public static void ServicoFachada(){
 		
+<<<<<<< HEAD
+=======
+
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	}
 	
 	public File solicitarServicoDescompactador(String caminho, List<String> ListaArquivo ){
@@ -31,9 +50,42 @@ public class ServicoFachada {
 		//pegar retorno para criar objeto
 	}
 
+<<<<<<< HEAD
 	public static List<EntidadeNo> getNodos() {
 		// TODO Auto-generated method stub
 		return null;
+=======
+//	public static List<EntidadeNo> getNodos() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+	
+	public List<EntidadeNo> inserirDados() {
+
+		ArrayList<EntidadeProcesso> processos1 = new ArrayList<EntidadeProcesso>();
+
+		EntidadeProcesso processo1 = servicoProcesso.solicitarCriacaoProcesso(12, "sds", "çaça", "sdsd", 1, "sdsds","sdsd");
+		EntidadeProcesso processo2 = servicoProcesso.solicitarCriacaoProcesso(12, "sds", "çaça", "sdsd", 1, "sdsds","sdsd");
+		EntidadeProcesso processo3 = servicoProcesso.solicitarCriacaoProcesso(12, "sds", "çaça", "sdsd", 1, "sdsds","sdsd");
+		
+		processos1.add(processo1);
+		processos1.add(processo2);
+		processos1.add(processo3);
+		
+		
+		EntidadeNo no1 = servicoNo.solicitarCriacaoNo("no 1", "12/11/11", processos1);
+		EntidadeNo no2 = servicoNo.solicitarCriacaoNo("no 2", "12/12/11", processos1);
+		EntidadeNo no3 = servicoNo.solicitarCriacaoNo("no 3", "12/12/11", processos1);
+		
+		List<EntidadeNo> listanodos = new ArrayList<EntidadeNo>();
+		
+		listanodos.add(no1);
+		listanodos.add(no2);
+		listanodos.add(no3);
+		
+		return listanodos;
+		
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	}
 }
 

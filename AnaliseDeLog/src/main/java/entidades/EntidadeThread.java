@@ -2,6 +2,7 @@ package entidades;
 
 public class EntidadeThread {
 	private int pid;
+<<<<<<< HEAD
 	private String username;
 	private String cpu;
 	private String process;
@@ -14,12 +15,27 @@ public class EntidadeThread {
 		this.username = username;
 		this.cpu = cpu;
 		this.process = process;
+=======
+	private String cpu;
+	private int lwpid;
+
+
+	private EntidadeThread(int pid, String cpu, int lwpid) {
+
+		this.pid = pid;
+		this.cpu = cpu;
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		this.lwpid = lwpid;
 	}
 
 	
+<<<<<<< HEAD
 	public static EntidadeThread criarThread(int pid, String username, String cpu, String process, int lwpid){
 		return new EntidadeThread(pid, username, cpu, process, lwpid);		
+=======
+	public static EntidadeThread criarThread(int pid, String cpu, int lwpid){
+		return new EntidadeThread(pid, cpu, lwpid);		
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	}
 
 
@@ -31,6 +47,7 @@ public class EntidadeThread {
 		this.pid = pid;
 	}
 
+<<<<<<< HEAD
 	public String getUsername() {
 		return username;
 	}
@@ -39,6 +56,8 @@ public class EntidadeThread {
 		this.username = username;
 	}
 
+=======
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	public String getCpu() {
 		return cpu;
 	}
@@ -47,6 +66,7 @@ public class EntidadeThread {
 		this.cpu = cpu;
 	}
 
+<<<<<<< HEAD
 	public String getProcess() {
 		return process;
 	}
@@ -55,6 +75,8 @@ public class EntidadeThread {
 		this.process = process;
 	}
 
+=======
+>>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	public int getLwpid() {
 		return lwpid;
 	}

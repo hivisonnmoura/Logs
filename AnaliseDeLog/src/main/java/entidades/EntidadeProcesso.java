@@ -11,7 +11,9 @@ public class EntidadeProcesso {
 	private String process;
 	private String hora;
 
+
 	private EntidadeProcesso(int pid, String username, String time, String cpu, int nlwp, String process, String hora) {
+
 		this.pid = pid;
 		this.username = username;
 		this.time = time;
