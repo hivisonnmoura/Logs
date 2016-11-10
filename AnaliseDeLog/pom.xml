@@ -30,13 +30,7 @@
 		</dependency>
 
 	</dependencies>
-<<<<<<< HEAD
 	<build>
-=======
-	
-	<build>
-	
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -49,10 +43,6 @@
 			</plugin>
 		</plugins>
 	</build>
-<<<<<<< HEAD
-=======
-	
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 </project>
 
 

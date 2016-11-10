@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-package servicos;
-
-import java.util.ArrayList;
-
-import entidades.EntidadeNo;
-import entidades.EntidadeProcesso;
-import fabricas.FabricaNo;
-import repositorios.RepositorioNo;
-
-public class ServicoNo {
-	
-	private RepositorioNo repositorioNo = new RepositorioNo(); 
-
-	public ServicoNo() {
-
-	}
-
-	public EntidadeNo solicitarCriacaoNo (String nome, String data, ArrayList<EntidadeProcesso> processos){
-		EntidadeNo no = FabricaNo.nova().criarNo(nome, data, processos);
-		repositorioNo.insert(no);
-		return no;
-		
-		
-	}
-
-	public EntidadeNo solicitarselectByData(String data) {
-		return repositorioNo.selectByData(data);
-	}
-}
-=======
 package servicos;
 
 import java.util.ArrayList;
@@ -60,4 +29,3 @@ public class ServicoNo {
 	}
 	
 }
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5

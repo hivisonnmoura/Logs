@@ -2,39 +2,27 @@ package servicos;
 
 
 import java.io.File;
-<<<<<<< HEAD
-import java.util.List;
-
-import entidades.EntidadeNo;
-=======
 import java.util.ArrayList;
 import java.util.List;
 
 import entidades.EntidadeNo;
 import entidades.EntidadeProcesso;
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 import utilidades.ProcessaDadosDoNo;
 
 public class ServicoFachada {
 
 	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
-<<<<<<< HEAD
-=======
 
 	ServicoNo servicoNo = new ServicoNo();
 	ServicoProcesso servicoProcesso = new ServicoProcesso();
 	
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	
 	//static ServicoInterpretador servicoInterpretador = new ServicoInterpretador();
 	
 	public static void ServicoFachada(){
 		
-<<<<<<< HEAD
-=======
 
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	}
 	
 	public File solicitarServicoDescompactador(String caminho, List<String> ListaArquivo ){
@@ -50,11 +38,6 @@ public class ServicoFachada {
 		//pegar retorno para criar objeto
 	}
 
-<<<<<<< HEAD
-	public static List<EntidadeNo> getNodos() {
-		// TODO Auto-generated method stub
-		return null;
-=======
 //	public static List<EntidadeNo> getNodos() {
 //		// TODO Auto-generated method stub
 //		return null;
@@ -85,7 +68,6 @@ public class ServicoFachada {
 		
 		return listanodos;
 		
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 	}
 }
 

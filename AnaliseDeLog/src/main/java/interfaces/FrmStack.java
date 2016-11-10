@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 //package interfaces;
 //
 //import java.awt.BorderLayout;
@@ -92,7 +90,6 @@
 //}
 
 
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 package interfaces;
 
 import java.awt.BorderLayout;
@@ -100,26 +97,18 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-<<<<<<< HEAD
-=======
 import javax.swing.JTextField;
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextPane;
 import javax.swing.border.TitledBorder;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.TextArea;
-<<<<<<< HEAD
-=======
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.ClipboardOwner;
@@ -129,7 +118,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.TextListener;
 import java.awt.event.TextEvent;
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 
 public class FrmStack extends JFrame {
 
@@ -144,10 +132,7 @@ public class FrmStack extends JFrame {
 				try {
 					FrmStack frame = new FrmStack();
 					frame.setVisible(true);
-<<<<<<< HEAD
-=======
 					
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -168,17 +153,6 @@ public class FrmStack extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblSelecioneAThread = new JLabel("Selecione a Thread desejada: ");
-<<<<<<< HEAD
-		lblSelecioneAThread.setBounds(155, 21, 145, 14);
-		contentPane.add(lblSelecioneAThread);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(155, 36, 160, 20);
-		contentPane.add(comboBox);
-		
-		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Descrição da Stack da Thread escolhida", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-=======
 		lblSelecioneAThread.setBounds(155, 21, 256, 14);
 		contentPane.add(lblSelecioneAThread);
 		
@@ -200,14 +174,11 @@ public class FrmStack extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Descricao da Stack da Thread escolhida", TitledBorder.LEADING, TitledBorder.TOP, null, null));
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		panel.setBounds(4, 93, 476, 333);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		TextArea textArea = new TextArea();
-<<<<<<< HEAD
-=======
 		textArea.addTextListener(new TextListener() {
 			public void textValueChanged(TextEvent arg0) {
 
@@ -217,23 +188,11 @@ public class FrmStack extends JFrame {
 		textArea.addKeyListener(new KeyAdapter() {
 
 		});
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		textArea.setText("Descri\u00E7\u00E3o da Stack");
 		textArea.setBounds(10, 21, 456, 302);
 		panel.add(textArea);
 		
 		JButton btnRetornar = new JButton("Retornar");
-<<<<<<< HEAD
-		btnRetornar.setBounds(206, 427, 89, 23);
-		contentPane.add(btnRetornar);
-		
-		JButton btnNewButton = new JButton("Copiar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnNewButton.setBounds(298, 427, 89, 23);
-=======
 		btnRetornar.setBounds(10, 427, 89, 23);
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -261,23 +220,15 @@ public class FrmStack extends JFrame {
 			}
 		});
 		btnNewButton.setBounds(210, 427, 89, 23);
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Fechar");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
-=======
 				setVisible(false);
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 			}
 		});
 		btnNewButton_1.setBounds(391, 427, 89, 23);
 		contentPane.add(btnNewButton_1);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5

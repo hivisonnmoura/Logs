@@ -10,13 +10,8 @@ public class ServicoThread {
 	public ServicoThread(){
 		
 	}
-<<<<<<< HEAD
-	public EntidadeThread solicitarCriacaoThread(int pid, String username, String cpu, String process, int lwpid){
-		EntidadeThread thread = FabricaThread.nova().criarThread(pid, username, cpu, process, lwpid);
-=======
 	public EntidadeThread solicitarCriacaoThread(int pid, String cpu, int lwpid){
 		EntidadeThread thread = FabricaThread.nova().criarThread(pid, cpu, lwpid);
->>>>>>> 516fa9ad355a3f3e95e169cf51fff95ca91e16c5
 		repositorioThread.insert(thread);
 		return thread;
 	}
