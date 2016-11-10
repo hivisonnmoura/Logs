@@ -60,7 +60,7 @@ public class FrmNodos extends JFrame {
 		contentPane.add(panelPlanilha);
 
 		tableNodosCriticos = new JTable();
-		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(ServicoFachada.getNodos())));
+		//tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(ServicoFachada.getNodos())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
