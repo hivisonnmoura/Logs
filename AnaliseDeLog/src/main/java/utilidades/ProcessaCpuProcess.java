@@ -17,8 +17,7 @@ public class ProcessaCpuProcess {
 		String caminhoDoArquivo;
 
 		caminhoDoArquivo = pastaFinal.getName();
-		System.out.println(caminhoDoArquivo);
-	//	String dadosCpuProcess = nomePartes[nomePartes.length - 1];
+
 
 		String[] cpuProcessAtributos = caminhoDoArquivo.split("_");
 
@@ -31,7 +30,6 @@ public class ProcessaCpuProcess {
 
 			linhaCpuProcess = br.readLine();
 			linhaCpuProcess = br.readLine();
-			//System.out.println(linhaCpuProcess);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
@@ -59,7 +57,6 @@ public class ProcessaCpuProcess {
 		
 		
 		
-		 //System.out.println(processo.getPid()+processo.getCpu() );
 		 
 		return processo; // retorna vetor de dados CPU process para a
 								// tabela

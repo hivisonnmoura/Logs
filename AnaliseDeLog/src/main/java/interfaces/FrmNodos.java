@@ -82,7 +82,6 @@ public class FrmNodos extends JFrame {
 
 		tableNodosCriticos = new JTable();
 		scrollPane.setViewportView(tableNodosCriticos);
-		servicoFachada.retornaListaEntidadeNo().forEach(System.out::println);
 		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
 		
 		

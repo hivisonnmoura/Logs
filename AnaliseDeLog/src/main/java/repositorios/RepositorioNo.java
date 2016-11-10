@@ -32,7 +32,6 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	}
 
 	public ArrayList<EntidadeNo> findall() {
-		nos.forEach(System.out::println);
 		return nos;
 	}
 
