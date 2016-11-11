@@ -56,8 +56,8 @@ public class ServicoFachada {
 	}
 
 	public List<EntidadeNo> retornaListaEntidadeNo() {
-		
-		return ;
+		ServicoNo no = new ServicoNo();
+		return no.buscarTodos();
 	}
 	
 

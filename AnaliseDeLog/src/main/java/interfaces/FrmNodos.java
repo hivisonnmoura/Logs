@@ -84,8 +84,7 @@ public class FrmNodos extends JFrame {
 
 		tableNodosCriticos = new JTable();
 		scrollPane.setViewportView(tableNodosCriticos);
-		//tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
-
+		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
