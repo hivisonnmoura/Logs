@@ -46,6 +46,7 @@ public class OVNoProcesso {
 						entidadeProcesso.getPid(), entidadeProcesso.getUsername(), entidadeProcesso.getTime(),
 						entidadeProcesso.getCpu(), entidadeProcesso.getNlwp(), entidadeProcesso.getProcess(),
 						entidadeProcesso.getHora(), entidadeProcesso.getDiretorio());
+				if(!listaDeRetorno.contains(ovnoprocesso))
 				listaDeRetorno.add(ovnoprocesso);
 
 			}

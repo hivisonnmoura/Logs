@@ -1,6 +1,6 @@
 package interfaces;
 
-
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,24 +9,34 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.border.TitledBorder;
 import javax.swing.JTable;
 import javax.swing.JButton;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.table.DefaultTableModel;
 
-
-
+import entidades.EntidadeNo;
 import objetodevalor.OVNoProcesso;
+import repositorios.RepositorioNo;
+import repositorios.RepositorioProcesso;
 import servicos.ServicoFachada;
 import utilidades.ProcessaDadosCpuDetalhado;
 
 import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
-
+import javax.swing.ScrollPaneConstants;
+import java.awt.event.MouseAdapter;
 
 public class FrmNodos extends JFrame {
 
@@ -37,7 +47,6 @@ public class FrmNodos extends JFrame {
 	private DadoTableModel tableModel;
 
 	ServicoFachada servicoFachada = new ServicoFachada();
-	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -67,76 +76,100 @@ public class FrmNodos extends JFrame {
 
 		JPanel panelPlanilha = new JPanel();
 		panelPlanilha.setLayout(null);
-		panelPlanilha.setBorder(new TitledBorder(null, "Relatório dos pontos críticos", TitledBorder.LEADING,
+		panelPlanilha.setBorder(new TitledBorder(null, "Relatorio dos pontos criticos", TitledBorder.LEADING,
 				TitledBorder.TOP, null, null));
-		panelPlanilha.setBounds(55, 144, 477, 207);
+		panelPlanilha.setBounds(10, 11, 579, 364);
 		contentPane.add(panelPlanilha);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 25, 457, 170);
+		scrollPane.setBounds(10, 21, 559, 332);
 		panelPlanilha.add(scrollPane);
+		
+		MouseListener mouseClick = new MouseListener() {
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+			}
+		};
 
 		tableNodosCriticos = new JTable();
-		scrollPane.setViewportView(tableNodosCriticos);
+		tableNodosCriticos.setColumnSelectionAllowed(true);
+		tableNodosCriticos.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		tableNodosCriticos.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				tableNodosCriticos.addColumnSelectionInterval(0, 9);
+			}
+		});
+
+		scrollPane.setViewportView(tableNodosCriticos);		
 		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
 		tableNodosCriticos.setCellSelectionEnabled(true);
+		tableNodosCriticos.getColumnModel().getColumn(1).setPreferredWidth(120);
+		tableNodosCriticos.getColumnModel().getColumn(0).setPreferredWidth(120);
+		tableNodosCriticos.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-		JButton btnPrximo = new JButton("Pr\u00F3ximo");
+
+		JButton btnPrximo = new JButton("Proximo");
 		btnPrximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
 				
 				
-				String caminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
-				String caminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(caminhoDiretorio);
+				String caminhoDiretorio = tableNodosCriticos.getModel()
+						.getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
+				String caminhoCpuDetalhado = servicoFachada.direcionaCPUProcess(caminhoDiretorio);
 				ProcessaDadosCpuDetalhado.processaCpuDetalhada(caminhoCpuDetalhado);
 				FrmStack frmStack = new FrmStack();
 				frmStack.setVisible(true);
 				setVisible(false);
-				
-			
+
 			}
 		});
-		btnPrximo.setBounds(472, 377, 89, 23);
+		btnPrximo.setBounds(500, 377, 89, 23);
 		contentPane.add(btnPrximo);
+		
+		JButton btnRetornar = new JButton("Retornar");
+		btnRetornar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				servicoFachada.deletaRepositorios();
+				FrmDiretorio frmDiretorio = new FrmDiretorio();
+				frmDiretorio.setVisible(true);
+				setVisible(false);
+			
 
-		JComboBox comboBox = new JComboBox();
-		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		comboBox.setToolTipText("");
-		comboBox.setMaximumRowCount(3);
-		comboBox.setBackground(Color.WHITE);
-		comboBox.setBounds(302, 24, 112, 18);
-		contentPane.add(comboBox);
+			}
+		});
+		btnRetornar.setBounds(10, 377, 89, 23);
+		contentPane.add(btnRetornar);
+		
 
-		JLabel lblSelecioneOHorrio = new JLabel("Seleciona a data:");
-		lblSelecioneOHorrio.setBounds(191, 26, 112, 14);
-		contentPane.add(lblSelecioneOHorrio);
-
-		JPanel panel = new JPanel();
-		panel.setBorder(
-				new TitledBorder(null, "Filtro de horário", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(183, 51, 231, 82);
-		contentPane.add(panel);
-		panel.setLayout(null);
-
-		JLabel lblHoraInicial = new JLabel("Hora inicial: ");
-		lblHoraInicial.setBounds(10, 23, 89, 16);
-		panel.add(lblHoraInicial);
-
-		JLabel lblHoraFinal = new JLabel("Hora final: ");
-		lblHoraFinal.setBounds(10, 55, 89, 16);
-		panel.add(lblHoraFinal);
-
-		textField = new JTextField();
-		textField.setBounds(95, 18, 130, 26);
-		panel.add(textField);
-		textField.setColumns(10);
-
-		textField_1 = new JTextField();
-		textField_1.setBounds(95, 50, 130, 26);
-		panel.add(textField_1);
-		textField_1.setColumns(10);
 	}
 }

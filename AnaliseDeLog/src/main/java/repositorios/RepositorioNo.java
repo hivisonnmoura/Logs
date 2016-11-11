@@ -28,7 +28,7 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	}
 
 	public ArrayList<EntidadeNo> delete() {
-
+		nos.removeAll(nos);
 		return null;
 	}
 

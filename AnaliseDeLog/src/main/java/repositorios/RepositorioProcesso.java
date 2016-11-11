@@ -25,6 +25,7 @@ public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso
 	}
 
 	public ArrayList<EntidadeProcesso> delete() {
+		processos.removeAll(processos);
 		return null;
 	}
 

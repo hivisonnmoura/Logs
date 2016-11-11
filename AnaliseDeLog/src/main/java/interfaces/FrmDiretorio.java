@@ -16,6 +16,7 @@ import servicos.ServicoDescompactador;
 import servicos.ServicoFachada;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -33,6 +34,7 @@ public class FrmDiretorio extends JFrame {
 			public void run() {
 				try {
 					FrmDiretorio frame = new FrmDiretorio();
+					frame.setResizable(false);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -64,7 +66,6 @@ public class FrmDiretorio extends JFrame {
 		txtInserirDiretrio.setForeground(Color.LIGHT_GRAY);
 		txtInserirDiretrio.setBounds(6, 17, 285, 20);
 		panel.add(txtInserirDiretrio);
-		txtInserirDiretrio.setText("C:\\logs");
 		txtInserirDiretrio.setColumns(10);
 
 		JButton btnLocalizar = new JButton("Localizar");
@@ -72,7 +73,7 @@ public class FrmDiretorio extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				JFileChooser file = new JFileChooser();
-				file.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+				file.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 				int i = file.showSaveDialog(null);
 				if (i == 1) {
 
@@ -80,30 +81,45 @@ public class FrmDiretorio extends JFrame {
 
 					File arquivo = file.getSelectedFile();
 					String caminho = arquivo.toString();
-
-					List<String> ListaArquivo = new ArrayList<String>();
-
-					for (File f : arquivo.listFiles()) {
-						if (f.isFile()) {
-
-							if (f.getName().endsWith(".tar.gz")) {
-
-								ListaArquivo.add(f.getName().toString());
-							}
-						}
-
-					}
+					txtInserirDiretrio.setText(arquivo.getAbsolutePath());
 					
-					ServicoFachada servicoFachada = new ServicoFachada();
-					servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
-					FrmNodos formDois = new FrmNodos();
-					formDois.setVisible(true);
-					setVisible(false);
-
+					
 				}
 			}
 		});
 		btnLocalizar.setBounds(301, 16, 97, 23);
 		panel.add(btnLocalizar);
+		
+		JButton btnDescompactar = new JButton("Descompactar");
+		btnDescompactar.setBounds(135, 231, 150, 23);
+		contentPane.add(btnDescompactar);
+		btnDescompactar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setCursor(Cursor.WAIT_CURSOR);
+				List<String> ListaArquivo = new ArrayList<String>();
+				String caminho = txtInserirDiretrio.getText();
+				File arquivo = new File(caminho);
+
+				for (File f : arquivo.listFiles()) {
+					if (f.isFile()) {
+
+						if (f.getName().endsWith(".tar.gz")) {
+							
+							ListaArquivo.add(f.getName().toString());
+						}
+					}
+
+				}
+				ServicoFachada servicoFachada = new ServicoFachada();
+				servicoFachada.solicitarServicoDescompactador(caminho, ListaArquivo);
+				FrmNodos formDois = new FrmNodos();
+				formDois.setVisible(true);
+				setVisible(false);
+			}});
+
+		setCursor(Cursor.getDefaultCursor());
+		btnLocalizar.setBounds(301, 16, 97, 23);
+		panel.add(btnLocalizar);
 	}
+	
 }
