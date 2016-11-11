@@ -12,7 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-import servicos.ServicoDescompactador;
 import servicos.ServicoFachada;
 
 import java.awt.Color;
