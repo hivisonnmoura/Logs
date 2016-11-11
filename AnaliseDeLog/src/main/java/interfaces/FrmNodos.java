@@ -19,6 +19,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.table.DefaultTableModel;
 
 import entidades.EntidadeNo;
+import entidades.EntidadeThread;
 import objetodevalor.OVNoProcesso;
 import repositorios.RepositorioNo;
 import servicos.ServicoFachada;
@@ -44,6 +45,7 @@ public class FrmNodos extends JFrame {
 	private DadoTableModel tableModel;
 
 	ServicoFachada servicoFachada = new ServicoFachada();
+	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -94,12 +96,14 @@ public class FrmNodos extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 
 				
-				FrmStack frmStack = new FrmStack();
-				frmStack.setVisible(true);
-				setVisible(false);
+				
 				String caminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
 				String caminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(caminhoDiretorio);
 				ProcessaDadosCpuDetalhado.processaCpuDetalhada(caminhoCpuDetalhado);
+				FrmStack frmStack = new FrmStack();
+				frmStack.setVisible(true);
+				setVisible(false);
+				
 			
 			}
 		});

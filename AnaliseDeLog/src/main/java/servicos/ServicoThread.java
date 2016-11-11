@@ -7,8 +7,6 @@ import fabricas.FabricaThread;
 import repositorios.RepositorioThread;
 
 public class ServicoThread {
-	ArrayList<EntidadeThread> entidadeThread = new ArrayList<EntidadeThread>();
-	
 	private RepositorioThread repositorioThread = new RepositorioThread();
 	
 
@@ -23,8 +21,7 @@ public class ServicoThread {
 	}
 	
 	public ArrayList<EntidadeThread> buscarThreadDoRepositorio() {
-		entidadeThread = repositorioThread.findall();
-		return entidadeThread;
+		return repositorioThread.findall();
 		}
 	}
 	

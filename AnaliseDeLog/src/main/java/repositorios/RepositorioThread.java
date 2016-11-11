@@ -19,7 +19,8 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 		threads.add(thread);
 		
 	}
-
+	
+	
 	public ArrayList<EntidadeThread> delete() {
 		return null;
 	}
@@ -37,5 +38,14 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 		threads.forEach(System.out::println);
 		System.out.println("testaLista");
 		
+		
 	}
+/*
+	public int selectByLwpid(int lwpid) {
+			for (EntidadeThread itemThread : threads) {
+				if (lwpid== itemThread.getLwpid());
+						return lwpid;
+		}
+			return;
+}*/
 }

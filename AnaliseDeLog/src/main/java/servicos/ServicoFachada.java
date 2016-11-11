@@ -8,6 +8,7 @@ import entidades.EntidadeNo;
 import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
 import utilidades.ProcessaDadosDoNo;
+import utilidades.ProcessaStacksUtil;
 
 public class ServicoFachada {
 
@@ -62,6 +63,15 @@ public class ServicoFachada {
 		ServicoNo no = new ServicoNo();
 		return no.buscarTodos();
 	}
+
+	public  List<String> direcionaStack(EntidadeThread selectedItem) {
+		String caminhoDaStack = selectedItem.getCaminho().replace("CPUProcess_Detalhado_", "ResultDumps_").replace(".txt", ".log");
+		int decimalLwpid = selectedItem.getLwpid();
+		return ProcessaStacksUtil.processaStack(caminhoDaStack, decimalLwpid);
+		
+	}
+
+	
 	
 
 }

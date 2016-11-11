@@ -93,6 +93,7 @@
 package interfaces;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -100,6 +101,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JTextPane;
 import javax.swing.border.TitledBorder;
@@ -109,7 +111,10 @@ import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
 import servicos.ServicoFachada;
 import servicos.ServicoThread;
+import utilidades.ProcessaStacksUtil;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -128,6 +133,10 @@ import java.awt.event.TextEvent;
 
 public class FrmStack extends JFrame {
 
+	RepositorioThread repositorioThread = new  RepositorioThread();
+	String stringStack;
+	TextArea textArea = new TextArea();
+	
 	private JPanel contentPane;
 	ServicoFachada servicoFachada = new ServicoFachada();
 	public static void main(String[] args) {
@@ -166,32 +175,42 @@ public class FrmStack extends JFrame {
 		
 		
 		
-		JComboBox comboBox = new JComboBox();
-		
+		JComboBox<Object> comboBox = new JComboBox<Object>(new DefaultComboBoxModel<Object>(servicoFachada.buscarTodosObjetosRepositorioThread().toArray()));
+		comboBox.setRenderer(new DefaultListCellRenderer(){
+			private static final long serialVersionUID = 1L;
+
+			@Override
+			public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
+					boolean cellHasFocus) {
+				super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+				if( value instanceof EntidadeThread ){
+					EntidadeThread entidadeThread = (EntidadeThread) value;
+					setText(entidadeThread.getCpu() + " - "+ entidadeThread.getLwpid());
+				}
+				return this;
+			}
+			
+		});
+		/*
 		EntidadeThread entidadeThread = new EntidadeThread(17602, " 2.5%", 2035,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
 		EntidadeThread entidadeThread2 = new EntidadeThread(17602, " 1.7%", 51,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
 		EntidadeThread entidadeThread3 = new EntidadeThread(17602, " 1.0%", 2002,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
 		List<EntidadeThread> thread = new ArrayList<>();
 		thread.add(entidadeThread);
 		thread.add(entidadeThread2);
-		thread.add(entidadeThread3);
-		
+		thread.add(entidadeThread3);*/
+		/*
 		for (EntidadeThread entidadeThreads : thread) {
 			//String listaThread = entidadeThreads.getCpu().toString()+" - " + Integer.toString(entidadeThreads.getLwpid());
 			comboBox.addItem(entidadeThreads.getCpu()+ " - " +entidadeThreads.getLwpid());
 		}
+		*/
 		
-		/*
-		for (EntidadeThread thread : servicoFachada.buscarTodosObjetosRepositorioThread()) {
-			String listaThreadComboBox = thread.getCpu().toString()+" - "+ Integer.toString(thread.getLwpid());
-			comboBox.addItem(listaThreadComboBox);
-		}*/
-
 		comboBox.setSelectedIndex(-1);
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				textArea.setText(String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem())));
 				
 			}
 		});
@@ -204,19 +223,13 @@ public class FrmStack extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		TextArea textArea = new TextArea();
-		textArea.addTextListener(new TextListener() {
-			public void textValueChanged(TextEvent arg0) {
-				
-
-				
-			}
-		});
+		
 		textArea.addKeyListener(new KeyAdapter() {
 
 		});
 		textArea.setText("Descri\u00E7\u00E3o da Stack");
 		textArea.setBounds(10, 21, 456, 302);
+		
 		panel.add(textArea);
 		
 		JButton btnRetornar = new JButton("Retornar");
