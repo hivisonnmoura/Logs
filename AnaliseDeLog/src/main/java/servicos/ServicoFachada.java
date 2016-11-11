@@ -45,7 +45,8 @@ public class ServicoFachada {
 	}
 
 	public ArrayList<EntidadeThread> buscarTodosObjetosRepositorioThread() {
-		return repositorioThread.findall();
+		ServicoThread thread = new ServicoThread();
+		return  thread.buscarThreadDoRepositorio();
 	}
 
 	public String direcionaCPUProcess(String caminhoDiretorio) {

@@ -14,9 +14,10 @@ import servicos.ServicoThread;
 
 public class ProcessaDadosCpuDetalhado {
 
-	public static void processaCpuDetalhada(File file) {
-		ServicoFachada servicoFachada = new ServicoFachada();
-		String caminhoDoArquivo = file.getAbsolutePath();
+	public static void processaCpuDetalhada(String file) {
+		File caminhoCpuDetalhado = new File(file);
+		//ServicoFachada servicoFachada = new ServicoFachada();
+		String caminhoDoArquivo = caminhoCpuDetalhado.getAbsolutePath();
 		ServicoThread servicoThread = new ServicoThread();
 		List<String> listaCpuDetalhada = new ArrayList<>();
 
@@ -42,7 +43,7 @@ public class ProcessaDadosCpuDetalhado {
 					caminhoDoArquivo);
 
 		}
-
+		
 	}
 
 }

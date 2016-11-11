@@ -7,8 +7,10 @@ import fabricas.FabricaThread;
 import repositorios.RepositorioThread;
 
 public class ServicoThread {
-	private RepositorioThread repositorioThread = new RepositorioThread();
 	ArrayList<EntidadeThread> entidadeThread = new ArrayList<EntidadeThread>();
+	
+	private RepositorioThread repositorioThread = new RepositorioThread();
+	
 
 	public ServicoThread() {
 
@@ -20,11 +22,10 @@ public class ServicoThread {
 		return thread;
 	}
 	
-	public void buscarThreadDoRepositorio() {
+	public ArrayList<EntidadeThread> buscarThreadDoRepositorio() {
 		entidadeThread = repositorioThread.findall();
-		for (EntidadeThread entidadeThread2 : entidadeThread) {
-			System.out.println(entidadeThread2);
+		return entidadeThread;
 		}
 	}
 	
-}
+

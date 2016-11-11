@@ -161,8 +161,10 @@ public class FrmStack extends JFrame {
 		
 		
 		JComboBox comboBox = new JComboBox();
+		
 		for (EntidadeThread thread : servicoFachada.buscarTodosObjetosRepositorioThread()) {
 			String listaThreadComboBox = thread.getCpu().toString()+" - "+ Integer.toString(thread.getLwpid());
+			System.out.println(listaThreadComboBox);
 			comboBox.addItem(listaThreadComboBox);
 		}
 		

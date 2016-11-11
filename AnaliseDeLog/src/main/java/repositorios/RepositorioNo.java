@@ -6,8 +6,9 @@ import java.util.List;
 import entidades.EntidadeNo;
 
 public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
-	static ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
 	
+	static ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
+
 	public ArrayList<EntidadeNo> select(EntidadeNo no) {
 		return select(no);
 	}
@@ -23,7 +24,7 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 
 	public void insert(EntidadeNo no) {
 		nos.add(no);
-		
+
 	}
 
 	public ArrayList<EntidadeNo> delete() {
@@ -39,6 +40,5 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 
 		return null;
 	}
-	
 
 }

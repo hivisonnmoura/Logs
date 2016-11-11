@@ -93,10 +93,13 @@ public class FrmNodos extends JFrame {
 		btnPrximo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				ProcessaDadosCpuDetalhado cpuDetalhado = new ProcessaDadosCpuDetalhado();
-				//servicoFachada servicoFachada = new
-				//String CaminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
-				//String CaminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(CaminhoDiretorio);
+				
+				FrmStack frmStack = new FrmStack();
+				frmStack.setVisible(true);
+				setVisible(false);
+				String caminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
+				String caminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(caminhoDiretorio);
+				ProcessaDadosCpuDetalhado.processaCpuDetalhada(caminhoCpuDetalhado);
 			
 			}
 		});
