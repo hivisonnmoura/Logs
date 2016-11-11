@@ -84,7 +84,7 @@ public class FrmNodos extends JFrame {
 
 		tableNodosCriticos = new JTable();
 		scrollPane.setViewportView(tableNodosCriticos);
-		tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
+		//tableNodosCriticos.setModel(new DadoTableModel(OVNoProcesso.criarCom(servicoFachada.retornaListaEntidadeNo())));
 
 		tableNodosCriticos.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		tableNodosCriticos.setColumnSelectionAllowed(true);
@@ -95,16 +95,10 @@ public class FrmNodos extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 
 				ProcessaDadosCpuDetalhado cpuDetalhado = new ProcessaDadosCpuDetalhado();
-				servicoFachada servicoFachada = new 
-				String CaminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
-				String CaminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(CaminhoDiretorio);
-				
-				//receber uma arraylist do ernesto
-				
-
-				// FrmStack frmTres = new FrmStack();
-				// frmTres.setVisible(true);
-				// setVisible(false);
+				//servicoFachada servicoFachada = new
+				//String CaminhoDiretorio = tableNodosCriticos.getModel().getValueAt(tableNodosCriticos.getSelectedRow(), 9).toString();
+				//String CaminhoCpuDetalhado =  servicoFachada.direcionaCPUProcess(CaminhoDiretorio);
+			
 			}
 		});
 		btnPrximo.setBounds(472, 377, 89, 23);

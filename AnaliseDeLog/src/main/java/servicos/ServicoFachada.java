@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import entidades.EntidadeNo;
 import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
 import utilidades.ProcessaDadosDoNo;
@@ -52,6 +53,11 @@ public class ServicoFachada {
 		String conversaoDiretorioProcessParaDetalhado = caminhoDiretorio.replace("CPUProcess_","CPUProcess_Detalhado_");
 		return conversaoDiretorioProcessParaDetalhado;
 		
+	}
+
+	public List<EntidadeNo> retornaListaEntidadeNo() {
+		
+		return ;
 	}
 	
 
