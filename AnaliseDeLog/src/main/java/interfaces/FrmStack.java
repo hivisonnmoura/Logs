@@ -104,8 +104,11 @@ import javax.swing.JComboBox;
 import javax.swing.JTextPane;
 import javax.swing.border.TitledBorder;
 
+import entidades.EntidadeNo;
 import entidades.EntidadeThread;
+import repositorios.RepositorioThread;
 import servicos.ServicoFachada;
+import servicos.ServicoThread;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -119,6 +122,8 @@ import java.awt.datatransfer.Transferable;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.TextListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.TextEvent;
 
 public class FrmStack extends JFrame {
@@ -138,6 +143,7 @@ public class FrmStack extends JFrame {
 			}
 		});
 	}
+
 
 	/**
 	 * Create the frame.
@@ -162,12 +168,25 @@ public class FrmStack extends JFrame {
 		
 		JComboBox comboBox = new JComboBox();
 		
-		for (EntidadeThread thread : servicoFachada.buscarTodosObjetosRepositorioThread()) {
-			String listaThreadComboBox = thread.getCpu().toString()+" - "+ Integer.toString(thread.getLwpid());
-			System.out.println(listaThreadComboBox);
-			comboBox.addItem(listaThreadComboBox);
+		EntidadeThread entidadeThread = new EntidadeThread(17602, " 2.5%", 2035,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
+		EntidadeThread entidadeThread2 = new EntidadeThread(17602, " 1.7%", 51,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
+		EntidadeThread entidadeThread3 = new EntidadeThread(17602, " 1.0%", 2002,"/Users/hivisonmoura/Downloads/acompanhamento_cmpsczeus07_10-20/CPUProcess_Detalhado_cmpsczeus07_10-20_1822.txt" );
+		List<EntidadeThread> thread = new ArrayList<>();
+		thread.add(entidadeThread);
+		thread.add(entidadeThread2);
+		thread.add(entidadeThread3);
+		
+		for (EntidadeThread entidadeThreads : thread) {
+			//String listaThread = entidadeThreads.getCpu().toString()+" - " + Integer.toString(entidadeThreads.getLwpid());
+			comboBox.addItem(entidadeThreads.getCpu()+ " - " +entidadeThreads.getLwpid());
 		}
 		
+		/*
+		for (EntidadeThread thread : servicoFachada.buscarTodosObjetosRepositorioThread()) {
+			String listaThreadComboBox = thread.getCpu().toString()+" - "+ Integer.toString(thread.getLwpid());
+			comboBox.addItem(listaThreadComboBox);
+		}*/
+
 		comboBox.setSelectedIndex(-1);
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -188,6 +207,7 @@ public class FrmStack extends JFrame {
 		TextArea textArea = new TextArea();
 		textArea.addTextListener(new TextListener() {
 			public void textValueChanged(TextEvent arg0) {
+				
 
 				
 			}

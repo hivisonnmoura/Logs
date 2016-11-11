@@ -11,7 +11,7 @@ import utilidades.ProcessaDadosDoNo;
 
 public class ServicoFachada {
 
-	RepositorioThread repositorioThread = new RepositorioThread();
+	//RepositorioThread repositorioThread = new RepositorioThread();
 	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
 
@@ -44,7 +44,7 @@ public class ServicoFachada {
 
 	}
 
-	public ArrayList<EntidadeThread> buscarTodosObjetosRepositorioThread() {
+	public List<EntidadeThread> buscarTodosObjetosRepositorioThread() {
 		ServicoThread thread = new ServicoThread();
 		return  thread.buscarThreadDoRepositorio();
 	}
@@ -55,7 +55,9 @@ public class ServicoFachada {
 		return conversaoDiretorioProcessParaDetalhado;
 		
 	}
-
+	
+	
+	
 	public List<EntidadeNo> retornaListaEntidadeNo() {
 		ServicoNo no = new ServicoNo();
 		return no.buscarTodos();

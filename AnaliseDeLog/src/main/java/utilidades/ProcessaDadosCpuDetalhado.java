@@ -9,17 +9,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import repositorios.RepositorioThread;
 import servicos.ServicoFachada;
 import servicos.ServicoThread;
 
 public class ProcessaDadosCpuDetalhado {
-
+	
+	static ServicoThread servicoThread = new ServicoThread();
+	static List<String> listaCpuDetalhada = new ArrayList<>();
+	
 	public static void processaCpuDetalhada(String file) {
 		File caminhoCpuDetalhado = new File(file);
-		//ServicoFachada servicoFachada = new ServicoFachada();
 		String caminhoDoArquivo = caminhoCpuDetalhado.getAbsolutePath();
-		ServicoThread servicoThread = new ServicoThread();
-		List<String> listaCpuDetalhada = new ArrayList<>();
 
 		try (Stream<String> stream = Files.lines(Paths.get(caminhoDoArquivo))) {
 			listaCpuDetalhada = (List<String>) stream.filter(cpuDetalhado -> cpuDetalhado.contains("java"))
@@ -41,6 +42,7 @@ public class ProcessaDadosCpuDetalhado {
 
 			servicoThread.solicitarCriacaoThread(pidDetalhadaDadoInt, cpuDetalhadaDado, lwpidDetalhadaDadoInt,
 					caminhoDoArquivo);
+			
 
 		}
 		

@@ -7,15 +7,17 @@ import entidades.EntidadeThread;
 
 public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 
+	
 	static ArrayList<EntidadeThread> threads = new ArrayList<EntidadeThread>();
+   
 
 	public ArrayList<EntidadeThread> select(EntidadeThread thread) {
 		return select(thread);
 	}
-	@Override
+	
 	public void insert(EntidadeThread thread) {
 		threads.add(thread);
-
+		
 	}
 
 	public ArrayList<EntidadeThread> delete() {
@@ -23,6 +25,7 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 	}
 
 	public ArrayList<EntidadeThread> findall() {
+		
 		return threads;
 	}
 
@@ -30,5 +33,9 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 
 		return null;
 	}
-
+	public void testaLista(){
+		threads.forEach(System.out::println);
+		System.out.println("testaLista");
+		
+	}
 }

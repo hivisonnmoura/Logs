@@ -6,7 +6,7 @@ public class EntidadeThread {
 	private int lwpid;
 	private String caminho;
 
-	private EntidadeThread(int pid, String cpu, int lwpid, String caminho) {
+	public EntidadeThread(int pid, String cpu, int lwpid, String caminho) {
 		this.pid = pid;
 		this.cpu = cpu;
 		this.lwpid = lwpid;
