@@ -26,9 +26,7 @@ public class TesteChooser extends JPanel
     chooser.setCurrentDirectory(new java.io.File("."));
     chooser.setDialogTitle(choosertitle);
     chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-    //
-    // disable the "All files" option.
-    //
+   
     chooser.setAcceptAllFileFilterUsed(false);
     //    
     if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) { 

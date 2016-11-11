@@ -34,10 +34,9 @@ public class ProcessaCpuProcess {
 			ioe.printStackTrace();
 		}
 		
-		cpuProcessDados = linhaCpuProcess.split("\\s+");// vetor da linha do cpu process
-		cpuProcessDados[0] = cpuProcessAtributos[3];// posicao valor da hora do processo
-		
-		/* setar atributos pelo vetor do cpuProcesse em um objeto do tipo Processo*/
+		cpuProcessDados = linhaCpuProcess.split("\\s+");
+		cpuProcessDados[0] = cpuProcessAtributos[3];
+
 		
 		
 		
@@ -59,8 +58,7 @@ public class ProcessaCpuProcess {
 		
 		
 		 
-		return processo; // retorna vetor de dados CPU process para a
-								// tabela
+		return processo; 
 	}
 
 	private static String tratarHora(String[] ajustaHoraComDivisao) {

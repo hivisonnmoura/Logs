@@ -40,12 +40,5 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 		
 		
 	}
-/*
-	public int selectByLwpid(int lwpid) {
-			for (EntidadeThread itemThread : threads) {
-				if (lwpid== itemThread.getLwpid());
-						return lwpid;
-		}
-			return;
-}*/
+
 }

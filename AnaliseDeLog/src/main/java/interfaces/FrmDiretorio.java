@@ -21,17 +21,13 @@ import java.awt.event.ActionEvent;
 
 public class FrmDiretorio extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtInserirDiretrio;
 	private JPanel panel;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -45,9 +41,7 @@ public class FrmDiretorio extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+
 	public FrmDiretorio() {
 		setTitle("Logz");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

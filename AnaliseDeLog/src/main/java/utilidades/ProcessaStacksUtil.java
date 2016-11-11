@@ -41,16 +41,12 @@ public class ProcessaStacksUtil {
 			listaDeStacks.add(arrayDivideStackEmBlocos[i]);
 		}
 
-		/*
-		 * Limpa variáveis temporárias
-		 */
+		
 		listaAuxiliar.clear();
 		arrayDivideStackEmBlocos = null;
 		
 
-		/*
-		 * Criando HashMap
-		 */
+		
 		Map<String, List<String>> hashMapDasStacks = new HashMap<>();
 		List<String> doLogs;
 
@@ -78,9 +74,7 @@ public class ProcessaStacksUtil {
 
 		}
 
-		/*
-		 * Pesquisa por Hexadecimal
-		 */
+		
 		hashMapDasStacks.forEach((k, v) -> {
 
 			if (hexaDecimal.equals(k)) {

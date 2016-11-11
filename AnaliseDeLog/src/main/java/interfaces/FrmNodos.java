@@ -1,6 +1,6 @@
 package interfaces;
 
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,19 +9,14 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
 import java.awt.Color;
-import java.awt.Dimension;
 
 import javax.swing.border.TitledBorder;
 import javax.swing.JTable;
 import javax.swing.JButton;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
-import javax.swing.table.DefaultTableModel;
 
-import entidades.EntidadeNo;
-import entidades.EntidadeThread;
+
+
 import objetodevalor.OVNoProcesso;
-import repositorios.RepositorioNo;
 import servicos.ServicoFachada;
 import utilidades.ProcessaDadosCpuDetalhado;
 
@@ -29,12 +24,9 @@ import javax.swing.border.LineBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
-import javax.swing.ScrollPaneConstants;
-import java.awt.event.MouseAdapter;
+
 
 public class FrmNodos extends JFrame {
 

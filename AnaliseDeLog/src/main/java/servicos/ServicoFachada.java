@@ -12,15 +12,14 @@ import utilidades.ProcessaStacksUtil;
 
 public class ServicoFachada {
 
-	//RepositorioThread repositorioThread = new RepositorioThread();
+
 	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
 
 	ServicoNo servicoNo = new ServicoNo();
 	ServicoProcesso servicoProcesso = new ServicoProcesso();
 
-	// static ServicoInterpretador servicoInterpretador = new
-	// ServicoInterpretador();
+
 
 	public static void ServicoFachada() {
 
@@ -35,11 +34,9 @@ public class ServicoFachada {
 
 	public void solicitarProcessaDadosDoNo(File caminhoTemp) {
 		processaDadosDoNo.processaDiretorio(caminhoTemp);
-		// pegar retorno para criar objeto
 
 	}
 
-	// carrega na memoria
 	public void solicitarProcessaDadosCpuDetalhado(File caminhoTemp) {
 		processaDadosDoNo.processaDiretorio(caminhoTemp);
 
