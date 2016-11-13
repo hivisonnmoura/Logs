@@ -43,8 +43,8 @@ public class FrmStack extends JFrame {
 					FrmStack frame = new FrmStack();
 
 					frame.setVisible(true);
-					frame.setResizable(false);
-					//frame.setMaximumSize(getM);
+					//frame.setResizable(false);
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 				} catch (Exception e) {
 					e.printStackTrace();

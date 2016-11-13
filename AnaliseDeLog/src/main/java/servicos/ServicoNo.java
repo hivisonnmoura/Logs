@@ -1,7 +1,6 @@
 package servicos;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import entidades.EntidadeNo;
 import entidades.EntidadeProcesso;

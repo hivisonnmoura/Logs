@@ -1,13 +1,11 @@
 package servicos;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import repositorios.RepositorioProcesso;
 import repositorios.RepositorioNo;
 import entidades.EntidadeNo;
 import entidades.EntidadeThread;
-import repositorios.RepositorioThread;
 import utilidades.ProcessaDadosDoNo;
 import utilidades.ProcessaStacksUtil;
 
