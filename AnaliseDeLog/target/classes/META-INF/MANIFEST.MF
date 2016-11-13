@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Built-By: hivisonmoura
-Class-Path: junit-4.12.jar hamcrest-core-1.3.jar commons-compress-1.12
- .jar
-Build-Jdk: 1.8.0_102
-Created-By: Maven Integration for Eclipse
-Main-Class: Main
-

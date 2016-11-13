@@ -22,7 +22,8 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 	
 	
 	public ArrayList<EntidadeThread> delete() {
-		return null;
+			threads.clear();
+			return null;
 	}
 
 	public ArrayList<EntidadeThread> findall() {
