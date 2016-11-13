@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35b727fa-0ac1-47c4-9ecb-9ac9d88d72e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/fabricas/FabricaNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/fabricas/FabricaNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$2.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos$1.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$1.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$2.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$3.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/repositorios/RepositorioNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/repositorios/RepositorioNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoFachada.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoFachada.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/pom.xml" afterPath="$PROJECT_DIR$/AnaliseDeLog/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/TesteChooser.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/TesteChooser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioThread.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCPU.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCPU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCpuDetalhado.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCpuDetalhado.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaStacksUtil.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaStacksUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
     <ignored path="AnaliseDeLog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +44,8 @@
       <file leaf-file-name="FrmDiretorio.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+            <state relative-caret-position="632">
+              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -103,7 +86,7 @@
       <file leaf-file-name="FrmStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="330">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -237,6 +220,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,8 +349,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -783,7 +766,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -796,7 +779,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21944444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21944444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -838,6 +821,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaNo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
@@ -1185,7 +1196,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="330">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1210,8 +1221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        <state relative-caret-position="632">
+          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
           <folding />
         </state>
       </provider>
