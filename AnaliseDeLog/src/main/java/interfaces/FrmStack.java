@@ -43,7 +43,6 @@ public class FrmStack extends JFrame {
 					FrmStack frame = new FrmStack();
 
 					frame.setVisible(true);
-					//frame.setResizable(false);
 					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 				} catch (Exception e) {
@@ -119,6 +118,7 @@ public class FrmStack extends JFrame {
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
+				repositorioThread.delete();
 				FrmNodos telaDois = new FrmNodos();
 				telaDois.setVisible(true);
 				setVisible(false);
