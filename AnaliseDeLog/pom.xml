@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>AnalisedeLog</groupId>
-	<artifactId>Indra</artifactId>
+	<artifactId>Logz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -64,7 +64,7 @@
 					<archive>
 						<manifest>
 							<!-- Jar file entry point -->
-							<mainClass>com.indra.analisadorDeLog.App</mainClass>
+							<mainClass>com.logz.analisadorDeLog.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

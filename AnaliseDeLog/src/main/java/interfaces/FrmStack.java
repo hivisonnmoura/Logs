@@ -1,31 +1,26 @@
 package interfaces;
 
-import java.awt.Component;
-import java.awt.EventQueue;
+import java.awt.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JComboBox;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.*;
 
 import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
 import servicos.ServicoFachada;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.DefaultListCellRenderer;
-import javax.swing.JButton;
+
+import javax.swing.text.Highlighter;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.TextArea;
-import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.ClipboardOwner;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.event.KeyAdapter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FrmStack extends JFrame {
 
@@ -33,7 +28,13 @@ public class FrmStack extends JFrame {
 	String stringStack;
 	TextArea textArea = new TextArea();
 
-	private JPanel contentPane;
+
+
+
+
+
+
+    private JPanel contentPane;
 	ServicoFachada servicoFachada = new ServicoFachada();
 
 	public static void main(String[] args) {
@@ -41,7 +42,6 @@ public class FrmStack extends JFrame {
 			public void run() {
 				try {
 					FrmStack frame = new FrmStack();
-
 					frame.setVisible(true);
 					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
@@ -57,6 +57,7 @@ public class FrmStack extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 946, 730);
 		contentPane = new JPanel();
+
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -89,9 +90,51 @@ public class FrmStack extends JFrame {
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				textArea.setText(
-						String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem())));
+				String stringStack = String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem()));
+				textArea.setText(stringStack);
 
+				if(stringStack.contains("soluziona")){
+					String regex = "\\n[\\s[0-9]*[a-zA-Z]*]*]*]*.soluziona[.[0-9]*[a-zA-Z]*]*]*\\)*";
+					Pattern pattern = Pattern.compile(regex);
+					Matcher matcher = pattern.matcher(stringStack);
+                    while (matcher.find()){
+                        int inicio = matcher.start();
+                        int fim = matcher.end();
+                        textArea.setSelectionStart(inicio);
+                        textArea.setSelectionEnd(fim);
+
+
+                    }
+
+                    /*
+					try{
+						Highlighter highlight = textArea.getHighlighter();
+						Highlighter.HighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(Color.yellow);
+						highlight.addHighlight(inicio, fim, painter);
+
+					}catch (BadLocationException bad){
+						bad.printStackTrace();
+					*/
+					}
+
+			/*
+					String regexParaDelimitarONid = "\\snid=0x[[0-9]*[a-fA-F]*]*\\s";
+			Pattern patternParaMapearNoTextONid = Pattern.compile(regexParaDelimitarONid);
+			Matcher matchVerificaSeExisteNid = patternParaMapearNoTextONid.matcher(stack);
+
+			while (matchVerificaSeExisteNid.find()) {
+
+				String key = stack.substring(matchVerificaSeExisteNid.start() + 5, matchVerificaSeExisteNid.end() - 1);
+
+
+				}
+				Highlighter highlighter = textArea.getHighlighter();
+				HighlightPainter painter =
+						new DefaultHighlighter.DefaultHighlightPainter(Color.pink);
+				int p0 = text.indexOf("world");
+				int p1 = p0 + "world".length();
+				highlighter.addHighlight(p0, p1, painter );
+				*/
 			}
 		});
 		comboBox.setBounds(375, 41, 170, 20);
