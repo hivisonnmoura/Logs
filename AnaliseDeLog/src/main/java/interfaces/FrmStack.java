@@ -5,13 +5,11 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.text.*;
 
 import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
 import servicos.ServicoFachada;
 
-import javax.swing.text.Highlighter;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.datatransfer.Clipboard;

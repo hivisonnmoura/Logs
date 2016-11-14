@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import repositorios.RepositorioThread;
-import servicos.ServicoFachada;
+
 import servicos.ServicoThread;
 
 public class ProcessaDadosCpuDetalhado {
@@ -23,7 +22,7 @@ public class ProcessaDadosCpuDetalhado {
 		String caminhoDoArquivo = caminhoCpuDetalhado.getAbsolutePath();
 
 		try (Stream<String> stream = Files.lines(Paths.get(caminhoDoArquivo))) {
-			listaCpuDetalhada = (List<String>) stream.filter(cpuDetalhado -> cpuDetalhado.contains("java"))
+			listaCpuDetalhada = stream.filter(cpuDetalhado -> cpuDetalhado.contains("java"))
 					.collect(Collectors.toList());
 		} catch (IOException e) {
 			e.printStackTrace();

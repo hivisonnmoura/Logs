@@ -3,10 +3,7 @@ package utilidades;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -37,9 +34,7 @@ public class ProcessaStacksUtil {
 
 		String[] arrayDivideStackEmBlocos= stringContatenaTexto.split("\n\n");
 
-		for (int i = 1; i < (arrayDivideStackEmBlocos.length - 1); i++) {
-			listaDeStacks.add(arrayDivideStackEmBlocos[i]);
-		}
+		listaDeStacks.addAll(Arrays.asList(arrayDivideStackEmBlocos).subList(1, arrayDivideStackEmBlocos.length - 1));
 
 		
 		listaAuxiliar.clear();

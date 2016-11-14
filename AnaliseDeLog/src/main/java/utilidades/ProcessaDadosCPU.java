@@ -34,7 +34,7 @@ public class ProcessaDadosCPU {
 					
 			String diretorioFinal = caminho.concat(File.separator).concat(file);
 			File pastaFinal = new File(diretorioFinal);
-			EntidadeProcesso processo = processaCpuProcess.processaArquivoCpuProcess(pastaFinal);
+			EntidadeProcesso processo = ProcessaCpuProcess.processaArquivoCpuProcess(pastaFinal);
 			if (!listaProcesso.contains(processo)) {
 				listaProcesso.add(processo);
 				servicoNo.solicitarCriacaoNo(nomeNo,dataNo,listaProcesso);

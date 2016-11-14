@@ -20,7 +20,7 @@ public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso
 	}
 
 	public void insert(EntidadeProcesso processo) {
-		this.processos.add(processo);
+		processos.add(processo);
 
 	}
 
@@ -31,7 +31,7 @@ public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso
 
 	public ArrayList<EntidadeProcesso> findall() {
 
-		return this.processos;
+		return processos;
 	}
 
 	public EntidadeProcesso find(EntidadeProcesso processo) {
