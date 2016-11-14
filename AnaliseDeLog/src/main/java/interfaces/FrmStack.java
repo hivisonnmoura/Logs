@@ -1,5 +1,6 @@
 package interfaces;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
@@ -8,11 +9,16 @@ import java.awt.GraphicsEnvironment;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.Highlighter;
 
 import entidades.EntidadeThread;
 import repositorios.RepositorioThread;
@@ -29,16 +35,22 @@ import java.awt.datatransfer.ClipboardOwner;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.event.KeyAdapter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 
 public class FrmStack extends JFrame {
 
 	RepositorioThread repositorioThread = new RepositorioThread();
 	String stringStack;
-	TextArea textArea = new TextArea();
+	JTextArea jTextArea = new JTextArea();
 	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
 	int largura = gd.getDisplayMode().getWidth();
 	int altura = gd.getDisplayMode().getHeight();
-	
+	JScrollPane sp = new JScrollPane(jTextArea);
+
 	private JPanel contentPane;
 	ServicoFachada servicoFachada = new ServicoFachada();
 
@@ -50,8 +62,7 @@ public class FrmStack extends JFrame {
 
 					frame.setVisible(true);
 					frame.setResizable(false);
-					//frame.setMaximumSize(getM);
-
+					// frame.setMaximumSize(getM);
 
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -61,8 +72,7 @@ public class FrmStack extends JFrame {
 	}
 
 	public FrmStack() {
-		
-		
+
 		setTitle("Logz - An\u00E1lise de stacks");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, largura, altura);
@@ -72,10 +82,8 @@ public class FrmStack extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		
-		
 		JLabel lblSelecioneAThread = new JLabel("Selecione a Thread desejada: ");
-		lblSelecioneAThread.setBounds(((int) ((largura/2)-170)), (int)(altura*0.05), 256, 14);
+		lblSelecioneAThread.setBounds(((int) ((largura / 2) - 170)), (int) (altura * 0.05), 256, 14);
 		contentPane.add(lblSelecioneAThread);
 
 		setLocationRelativeTo(null);
@@ -102,33 +110,59 @@ public class FrmStack extends JFrame {
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				textArea.setText(
-						String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem())));
+				String stringStack = String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem()));
+				jTextArea.setText(stringStack);
 
+				if (stringStack.contains("soluziona")) {
+					System.out.println(" Foi");
+						
+					String regex = "\\n[\\s[0-9]*[a-zA-Z]*]*]*]*.soluziona[.[0-9]*[a-zA-Z]*[\\_\\(\\:]*]*]*\\s";
+					Pattern pattern = Pattern.compile(regex);
+					Matcher matcher = pattern.matcher(stringStack);
+					while (matcher.find()) {
+						int inicio = matcher.start()-1;
+						int fim = matcher.end();
+						jTextArea.setSelectionStart(inicio);
+						jTextArea.setSelectionEnd(fim);
+						
+						
+						
+						try {
+							Highlighter highlight = jTextArea.getHighlighter();
+							Highlighter.HighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(
+									Color.yellow);
+							highlight.addHighlight(inicio, fim, painter);
+						} catch (BadLocationException bad) {
+							bad.printStackTrace();
+
+						}	
+				}
+			}
 			}
 		});
-		comboBox.setBounds(((int) ((largura/2)-170)),(int)(altura*0.08), 170, 20);
+		comboBox.setBounds(((int) ((largura / 2) - 170)), (int) (altura * 0.08), 170, 20);
 		contentPane.add(comboBox);
 
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Descricao da Stack da Thread escolhida", TitledBorder.LEADING,
 				TitledBorder.TOP, null, null));
-		panel.setBounds(4, 93,(int) (largura*0.99), (int) (altura*0.78));
+		panel.setBounds(4, 93, (int) (largura * 0.99), (int) (altura * 0.78));
 
 		contentPane.add(panel);
-				
-		textArea.setBounds(10, 21, (int) (largura*0.98), (int) (altura*0.74));
 
-		textArea.addKeyListener(new KeyAdapter() {
+		jTextArea.addKeyListener(new KeyAdapter() {
 
 		});
 		panel.setLayout(null);
-		textArea.setText("Descri\u00E7\u00E3o da Stack");
+		jTextArea.setText("Descri\u00E7\u00E3o da Stack");
 
-		panel.add(textArea);
+		sp.setBounds(10, 21, (int) (largura * 0.98), (int) (altura * 0.74));
+		sp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		sp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		panel.add(sp);
 
 		JButton btnRetornar = new JButton("Retornar");
-		btnRetornar.setBounds(((int) ((largura*0.01))), (int)(altura*0.92), 89, 23);
+		btnRetornar.setBounds(((int) ((largura * 0.01))), (int) (altura * 0.92), 89, 23);
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				servicoFachada.deletaStack();
@@ -146,16 +180,15 @@ public class FrmStack extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				String descricaoStack = textArea.getText();
+				String descricaoStack = jTextArea.getText();
 
 				Clipboard board = Toolkit.getDefaultToolkit().getSystemClipboard();
-				ClipboardOwner selection = new StringSelection(textArea.getText());
+				ClipboardOwner selection = new StringSelection(jTextArea.getText());
 				board.setContents((Transferable) selection, selection);
-				
 
 			}
 		});
-		btnNewButton.setBounds(((int) (largura/2)-89/2),  (int)(altura*0.92), 89, 23);
+		btnNewButton.setBounds(((int) (largura / 2) - 89 / 2), (int) (altura * 0.92), 89, 23);
 		contentPane.add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("Fechar");
@@ -164,7 +197,7 @@ public class FrmStack extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewButton_1.setBounds(((int) (largura*0.99-89)), (int) (altura*0.92), 89, 23);
+		btnNewButton_1.setBounds(((int) (largura * 0.99 - 89)), (int) (altura * 0.92), 89, 23);
 		contentPane.add(btnNewButton_1);
 	}
 }
