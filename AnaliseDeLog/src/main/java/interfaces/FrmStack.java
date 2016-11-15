@@ -114,13 +114,11 @@ public class FrmStack extends JFrame {
 				jTextArea.setText(stringStack);
 
 				if (stringStack.contains("soluziona")) {
-					System.out.println(" Foi");
-						
-					String regex = "\\n[\\s[0-9]*[a-zA-Z]*]*]*]*.soluziona[.[0-9]*[a-zA-Z]*[\\_\\(\\:]*]*]*\\s";
-					Pattern pattern = Pattern.compile(regex);
+					String regexDelimitaLinhasComSoluzionaZeus = "\\t[\\s[0-9]*[a-zA-Z]*]*]*]*.soluziona[.[0-9]*[a-zA-Z]*[\\_\\(\\:\\s]*]*]*[\\)]";
+					Pattern pattern = Pattern.compile(regexDelimitaLinhasComSoluzionaZeus);
 					Matcher matcher = pattern.matcher(stringStack);
 					while (matcher.find()) {
-						int inicio = matcher.start()-1;
+						int inicio = matcher.start()+1;
 						int fim = matcher.end();
 						jTextArea.setSelectionStart(inicio);
 						jTextArea.setSelectionEnd(fim);

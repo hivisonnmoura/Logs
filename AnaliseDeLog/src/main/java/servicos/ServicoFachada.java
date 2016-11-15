@@ -6,6 +6,7 @@ import repositorios.RepositorioProcesso;
 import repositorios.RepositorioNo;
 import entidades.EntidadeNo;
 import entidades.EntidadeThread;
+import repositorios.RepositorioThread;
 import utilidades.ProcessaDadosDoNo;
 import utilidades.ProcessaStacksUtil;
 
@@ -15,6 +16,7 @@ public class ServicoFachada {
 	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
 	RepositorioProcesso repositorioProcesso = new RepositorioProcesso();
 	RepositorioNo repositorioNo = new RepositorioNo();
+	RepositorioThread repositorioThread = new RepositorioThread();
 	
 	ServicoNo servicoNo = new ServicoNo();
 	ServicoProcesso servicoProcesso = new ServicoProcesso();
@@ -69,6 +71,10 @@ public class ServicoFachada {
 		int decimalLwpid = selectedItem.getLwpid();
 		return ProcessaStacksUtil.processaStack(caminhoDaStack, decimalLwpid);
 
+	}
+
+	public void deletaStack(){
+		repositorioThread.delete();
 	}
 
 }
