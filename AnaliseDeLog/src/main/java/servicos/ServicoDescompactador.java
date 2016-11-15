@@ -15,7 +15,7 @@ import org.apache.commons.compress.archivers.ArchiveStreamFactory;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 
-public class ServicoDescompactador {
+class ServicoDescompactador {
 
 	public File extrairLogs(String caminho, List<String> arquivos){
 		File localDestino = null;

@@ -6,7 +6,7 @@ import entidades.EntidadeProcesso;
 import servicos.ServicoNo;
 
 public class ProcessaDadosDoNo {
-	static ProcessaDadosCPU processaDadosCPU = new ProcessaDadosCPU();
+	private static ProcessaDadosCPU processaDadosCPU = new ProcessaDadosCPU();
 	static ArrayList<EntidadeProcesso> listaProcesso = new ArrayList<EntidadeProcesso>();
 	static ServicoNo servicoNo = new ServicoNo();
 
@@ -17,7 +17,7 @@ public class ProcessaDadosDoNo {
 		return arquivos;
 	}
 
-	public static void processaDiretorioDoArquivo(String[] arquivos, String diretorioDoTemp) {
+	private static void processaDiretorioDoArquivo(String[] arquivos, String diretorioDoTemp) {
 		for (String file1 : arquivos) {
 			String[] noAtributoData = file1.split("_");
 			String nomeNo = noAtributoData[1];

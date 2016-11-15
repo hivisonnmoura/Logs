@@ -7,7 +7,7 @@ import entidades.EntidadeProcesso;
 
 public class FabricaNo {
 
-	public FabricaNo() {
+	private FabricaNo() {
 
 	}
 

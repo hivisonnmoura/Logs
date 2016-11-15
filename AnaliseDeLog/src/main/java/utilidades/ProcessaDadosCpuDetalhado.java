@@ -14,8 +14,8 @@ import servicos.ServicoThread;
 
 public class ProcessaDadosCpuDetalhado {
 	
-	static ServicoThread servicoThread = new ServicoThread();
-	static List<String> listaCpuDetalhada = new ArrayList<>();
+	private static ServicoThread servicoThread = new ServicoThread();
+	private static List<String> listaCpuDetalhada = new ArrayList<>();
 	
 	public static void processaCpuDetalhada(String file) {
 		File caminhoCpuDetalhado = new File(file);

@@ -23,9 +23,7 @@ public class FrmDiretorio extends JFrame {
 
 	
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
 	private JTextField txtInserirDiretrio;
-	private JPanel panel;
 
 
 	public static void main(String[] args) {
@@ -47,14 +45,14 @@ public class FrmDiretorio extends JFrame {
 		setTitle("Logz");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(500, 300, 444, 339);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		setLocationRelativeTo(null);
 
-		panel = new JPanel();
+		JPanel panel = new JPanel();
 		panel.setBorder(
 				new TitledBorder(null, "Selecionar o Diretorio", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel.setBounds(10, 90, 408, 47);

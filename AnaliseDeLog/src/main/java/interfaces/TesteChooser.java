@@ -5,23 +5,21 @@ import java.awt.event.*;
 import java.awt.*;
 
 
-public class TesteChooser extends JPanel
+class TesteChooser extends JPanel
    implements ActionListener {
-   JButton go;
+
+  private String choosertitle;
    
-   JFileChooser chooser;
-   String choosertitle;
-   
-  public TesteChooser() {
-    go = new JButton("Do it");
+  private TesteChooser() {
+    JButton go = new JButton("Do it");
     go.addActionListener(this);
     add(go);
    }
 
   public void actionPerformed(ActionEvent e) {
     int result;
-        
-    chooser = new JFileChooser(); 
+
+    JFileChooser chooser = new JFileChooser();
     chooser.setCurrentDirectory(new java.io.File("."));
     chooser.setDialogTitle(choosertitle);
     chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);

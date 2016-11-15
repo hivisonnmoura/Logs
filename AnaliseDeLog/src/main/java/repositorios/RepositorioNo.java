@@ -6,7 +6,7 @@ import entidades.EntidadeNo;
 
 public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	
-	static ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
+	private static ArrayList<EntidadeNo> nos = new ArrayList<EntidadeNo>();
 
 	public ArrayList<EntidadeNo> select(EntidadeNo no) {
 		return select(no);
@@ -27,7 +27,7 @@ public class RepositorioNo implements RepositorioGenerico<EntidadeNo> {
 	}
 
 	public ArrayList<EntidadeNo> delete() {
-		nos.removeAll(nos);
+		nos.clear();
 		return null;
 	}
 

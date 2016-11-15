@@ -2,7 +2,6 @@ package interfaces;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
@@ -28,7 +27,6 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.TextArea;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.ClipboardOwner;
@@ -38,21 +36,15 @@ import java.awt.event.KeyAdapter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 
-public class FrmStack extends JFrame {
+class FrmStack extends JFrame {
 
 	RepositorioThread repositorioThread = new RepositorioThread();
 	String stringStack;
-	JTextArea jTextArea = new JTextArea();
-	GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-	int largura = gd.getDisplayMode().getWidth();
-	int altura = gd.getDisplayMode().getHeight();
-	JScrollPane sp = new JScrollPane(jTextArea);
+	private JTextArea jTextArea = new JTextArea();
 
-	private JPanel contentPane;
-	ServicoFachada servicoFachada = new ServicoFachada();
+	private ServicoFachada servicoFachada = new ServicoFachada();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -75,14 +67,17 @@ public class FrmStack extends JFrame {
 
 		setTitle("Logz - An\u00E1lise de stacks");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		int largura = gd.getDisplayMode().getWidth();
+		int altura = gd.getDisplayMode().getHeight();
 		setBounds(100, 100, largura, altura);
 
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblSelecioneAThread = new JLabel("Selecione a Thread desejada: ");
+		JLabel lblSelecioneAThread = new JLabel("Selecione a Thread desejada:");
 		lblSelecioneAThread.setBounds(((int) ((largura / 2) - 170)), (int) (altura * 0.05), 256, 14);
 		contentPane.add(lblSelecioneAThread);
 
@@ -154,6 +149,7 @@ public class FrmStack extends JFrame {
 		panel.setLayout(null);
 		jTextArea.setText("Descri\u00E7\u00E3o da Stack");
 
+		JScrollPane sp = new JScrollPane(jTextArea);
 		sp.setBounds(10, 21, (int) (largura * 0.98), (int) (altura * 0.74));
 		sp.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		sp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);

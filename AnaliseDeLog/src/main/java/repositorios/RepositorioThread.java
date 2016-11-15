@@ -7,7 +7,7 @@ import entidades.EntidadeThread;
 public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 
 	
-	static ArrayList<EntidadeThread> threads = new ArrayList<EntidadeThread>();
+	private static ArrayList<EntidadeThread> threads = new ArrayList<EntidadeThread>();
    
 
 	public ArrayList<EntidadeThread> select(EntidadeThread thread) {

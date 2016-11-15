@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import entidades.EntidadeStack;
 
 public class RepositorioStack implements RepositorioGenerico<EntidadeStack> {
-	ArrayList<EntidadeStack> stacks = new ArrayList<EntidadeStack>();
+	private ArrayList<EntidadeStack> stacks = new ArrayList<EntidadeStack>();
 
 	public ArrayList<EntidadeStack> select(EntidadeStack stack) {
 		return select(stack);

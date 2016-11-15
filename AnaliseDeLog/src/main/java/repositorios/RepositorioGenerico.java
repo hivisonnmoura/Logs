@@ -3,7 +3,7 @@ package repositorios;
 
 import java.util.ArrayList;
 
-public interface RepositorioGenerico<T> {
+interface RepositorioGenerico<T> {
 	ArrayList<T>select(T t);
 	void insert(T t);
 	ArrayList<T>delete();

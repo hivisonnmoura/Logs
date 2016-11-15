@@ -9,10 +9,10 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
-public class DadoTableModel extends AbstractTableModel {
+class DadoTableModel extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	private List<OVNoProcesso> dados;
-	private String[] colunas = { "Nome do No", "Data do No", "PID", "Username", "Time", "CPU", "NLWP", "Process",
+	private String[] colunas = { "Nome do No", "Data do No", "PID", "Username", "HH:MM:SS", "CPU", "NLWP", "Process",
 			"Hora do Processo", "nome do arquivo" };
 
 	public DadoTableModel(List<OVNoProcesso> ov) {
