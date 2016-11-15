@@ -34,11 +34,6 @@ public class RepositorioThread implements RepositorioGenerico<EntidadeThread> {
 
 		return null;
 	}
-	public void testaLista(){
-		threads.forEach(System.out::println);
-		System.out.println("testaLista");
-		
-		
-	}
+
 
 }
