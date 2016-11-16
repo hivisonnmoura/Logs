@@ -12,18 +12,15 @@ import utilidades.ProcessaStacksUtil;
 
 public class ServicoFachada {
 
-	ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
-	ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
-	RepositorioProcesso repositorioProcesso = new RepositorioProcesso();
-	RepositorioNo repositorioNo = new RepositorioNo();
-	RepositorioThread repositorioThread = new RepositorioThread();
+	private ServicoDescompactador servicoDescompactador = new ServicoDescompactador();
+	private ProcessaDadosDoNo processaDadosDoNo = new ProcessaDadosDoNo();
+	private RepositorioProcesso repositorioProcesso = new RepositorioProcesso();
+	private RepositorioNo repositorioNo = new RepositorioNo();
+	private RepositorioThread repositorioThread = new RepositorioThread();
 	
-	ServicoNo servicoNo = new ServicoNo();
-	ServicoProcesso servicoProcesso = new ServicoProcesso();
 
-	public static void ServicoFachada() {
 
-	}
+
 
 	public File solicitarServicoDescompactador(String caminho, List<String> ListaArquivo) {
 		File file = servicoDescompactador.extrairLogs(caminho, ListaArquivo);
@@ -32,7 +29,7 @@ public class ServicoFachada {
 		return file;
 	}
 
-	public void solicitarProcessaDadosDoNo(File caminhoTemp) {
+	private void solicitarProcessaDadosDoNo(File caminhoTemp) {
 		processaDadosDoNo.processaDiretorio(caminhoTemp);
 
 	}
@@ -42,7 +39,7 @@ public class ServicoFachada {
 		repositorioNo.delete();
 	}
 
-	public void solicitarProcessaDadosCpuDetalhado(File caminhoTemp) {
+	private void solicitarProcessaDadosCpuDetalhado(File caminhoTemp) {
 		processaDadosDoNo.processaDiretorio(caminhoTemp);
 
 	}
@@ -54,9 +51,8 @@ public class ServicoFachada {
 
 	public String direcionaCPUProcess(String caminhoDiretorio) {
 
-		String conversaoDiretorioProcessParaDetalhado = caminhoDiretorio.replace("CPUProcess_",
+		return caminhoDiretorio.replace("CPUProcess_",
 				"CPUProcess_Detalhado_");
-		return conversaoDiretorioProcessParaDetalhado;
 
 	}
 

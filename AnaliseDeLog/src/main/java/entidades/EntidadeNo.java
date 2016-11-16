@@ -36,6 +36,7 @@ public class EntidadeNo {
 		this.data = data;
 	}
 
+
 	public List<EntidadeProcesso> getProcessos() {
 		return processos;
 	}
@@ -43,6 +44,6 @@ public class EntidadeNo {
 	public void setProcessos(List<EntidadeProcesso> processos) {
 		this.processos = processos;
 	}
-	
+
 	
 }

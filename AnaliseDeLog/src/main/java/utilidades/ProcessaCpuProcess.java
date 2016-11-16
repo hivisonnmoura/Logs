@@ -8,7 +8,7 @@ import java.io.IOException;
 import entidades.EntidadeProcesso;
 import servicos.ServicoProcesso;
 
-public class ProcessaCpuProcess {
+class ProcessaCpuProcess {
 
 	public static EntidadeProcesso processaArquivoCpuProcess(File pastaFinal) {
 		BufferedReader br = null;

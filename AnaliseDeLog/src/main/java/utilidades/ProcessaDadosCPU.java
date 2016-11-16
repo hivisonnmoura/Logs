@@ -10,10 +10,10 @@ import java.util.regex.Pattern;
 import entidades.EntidadeProcesso;
 import servicos.ServicoNo;
 
-public class ProcessaDadosCPU {
+class ProcessaDadosCPU {
 
 	ProcessaCpuProcess processaCpuProcess = new ProcessaCpuProcess();
-	 static ServicoNo servicoNo = new ServicoNo();
+	 private static ServicoNo servicoNo = new ServicoNo();
 	
 	public void processaDiretorioDoNo(String caminho, String nomeNo,String dataNo) {
 		

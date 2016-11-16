@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import entidades.EntidadeProcesso;
 
 public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso> {
-	static ArrayList<EntidadeProcesso> processos = new ArrayList<EntidadeProcesso>();
+	private static ArrayList<EntidadeProcesso> processos = new ArrayList<EntidadeProcesso>();
 
 	public ArrayList<EntidadeProcesso> select(EntidadeProcesso processo) {
 		return select(processo);
@@ -25,7 +25,7 @@ public class RepositorioProcesso implements RepositorioGenerico<EntidadeProcesso
 	}
 
 	public ArrayList<EntidadeProcesso> delete() {
-		processos.removeAll(processos);
+		processos.clear();
 		return null;
 	}
 

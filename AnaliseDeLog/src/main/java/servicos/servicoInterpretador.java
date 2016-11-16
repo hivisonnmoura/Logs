@@ -1,5 +1,5 @@
 package servicos;
 
-public class servicoInterpretador {
+class servicoInterpretador {
 
 }

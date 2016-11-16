@@ -8,8 +8,7 @@ import fabricas.FabricaNo;
 import repositorios.RepositorioNo;
 
 public class ServicoNo {
-	ArrayList<EntidadeNo> entidadeNo = new ArrayList<EntidadeNo>();
-	
+
 	private RepositorioNo repositorioNo = new RepositorioNo(); 
 
 	public ServicoNo() {
@@ -27,8 +26,8 @@ public class ServicoNo {
 	}
 	
 	public ArrayList<EntidadeNo> buscarTodos(){
-		
-		entidadeNo = repositorioNo.findall();
+
+		ArrayList<EntidadeNo> entidadeNo = repositorioNo.findall();
 		return entidadeNo;
  
 	}

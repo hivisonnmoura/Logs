@@ -4,7 +4,7 @@ import entidades.EntidadeStack;
 import fabricas.FabricaStack;
 import repositorios.RepositorioStack;
 
-public class ServicoStack {
+class ServicoStack {
 	
 	private RepositorioStack repositorioStack = new RepositorioStack();
 	

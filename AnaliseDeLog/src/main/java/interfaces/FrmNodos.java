@@ -32,15 +32,14 @@ import java.awt.event.ActionEvent;
 
 import java.awt.event.MouseAdapter;
 
-public class FrmNodos extends JFrame {
+class FrmNodos extends JFrame {
 
-	private JPanel contentPane;
 	private JTable tableNodosCriticos;
 	private JTextField textField;
 	private JTextField textField_1;
 	private DadoTableModel tableModel;
 
-	ServicoFachada servicoFachada = new ServicoFachada();
+	private ServicoFachada servicoFachada = new ServicoFachada();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -60,7 +59,7 @@ public class FrmNodos extends JFrame {
 		setTitle("Logz - Resumo de pontos cr\u00EDticos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 605, 439);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
