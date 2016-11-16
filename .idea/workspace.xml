@@ -1,50 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35b727fa-0ac1-47c4-9ecb-9ac9d88d72e3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/agregadores/AgregadorProcessoThread.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/agregadores/AgregadorThreadStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaDado.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/entidades/EntidadeThread.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/entidades/EntidadeThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/fabricas/FabricaNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/fabricas/FabricaNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$1.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$2.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmDiretorio.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos$1.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmNodos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$1.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$2.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$3.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/interfaces/FrmStack.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/repositorios/RepositorioNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/repositorios/RepositorioNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoFachada.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoFachada.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoNo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoStack.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/servicos/ServicoStack.class" />
+    <list default="true" id="35b727fa-0ac1-47c4-9ecb-9ac9d88d72e3" name="Default" comment="Limpando códigos inúteis do código">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/target/classes/entidades/EntidadeNo.class" afterPath="$PROJECT_DIR$/AnaliseDeLog/target/classes/entidades/EntidadeNo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/Main.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeThread.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/TesteChooser.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/TesteChooser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioGenerico.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioGenerico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioStack.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioThread.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoDeTesteDeTela.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoDeTesteDeTela.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoDescompactador.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoDescompactador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoFachada.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoFachada.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoNo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoStack.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/servicoInterpretador.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/servicoInterpretador.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaCpuProcess.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaCpuProcess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCPU.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCPU.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCpuDetalhado.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosCpuDetalhado.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosDoNo.java" afterPath="$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaDadosDoNo.java" />
     </list>
     <ignored path="AnaliseDeLog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,39 +29,9 @@
       <file leaf-file-name="FrmDiretorio.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="1275">
               <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntidadeProcesso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeProcesso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-              <folding>
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntidadeStack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-              <folding>
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +69,7 @@
       <file leaf-file-name="DadoTableModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="120">
               <caret line="15" column="52" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -148,12 +78,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrmNodos.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FrmNodos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="722">
               <caret line="123" column="49" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessaStacksUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaStacksUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrmStack.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2558#2566#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,9 +161,9 @@
         <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioNo.java" />
         <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java" />
         <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java" />
-        <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" />
         <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoFachada.java" />
         <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeNo.java" />
+        <option value="$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java" />
       </list>
     </option>
   </component>
@@ -259,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -518,6 +470,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -939,7 +892,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479178411668</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Limpando códigos inúteis do código">
+      <created>1479182720644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1479182720644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -959,8 +919,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21944444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -970,7 +928,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -987,7 +947,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Class frmStack Update&#10;" />
     <MESSAGE value="Make the lines of soluzionaZeus highlighted on textArea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make the lines of soluzionaZeus highlighted on textArea" />
+    <MESSAGE value="Limpando códigos inúteis do código" />
+    <option name="LAST_COMMIT_MESSAGE" value="Limpando códigos inúteis do código" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1011,9 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,9 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
           <caret line="63" column="0" selection-start-line="56" selection-start-column="12" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,9 +1065,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,12 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#1018#1019#0" expanded="false" />
-            <element signature="e#1060#1061#0" expanded="false" />
-            <element signature="e#1293#1294#0" expanded="false" />
-            <element signature="e#1331#1332#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,7 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,23 +1141,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaStacksUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/servicos/ServicoDescompactador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,9 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,7 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,7 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,23 +1181,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="1095" column="16" selection-start-line="1095" selection-start-column="16" selection-end-line="1095" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaDado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/fabricas/FabricaDado.java" />
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/repositorios/RepositorioProcesso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,18 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2558#2566#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,9 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1325,18 +1230,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeProcesso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="615">
           <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding>
             <element signature="e#996#997#0" expanded="true" />
@@ -1349,7 +1248,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/entidades/EntidadeStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="270">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="e#379#380#0" expanded="true" />
@@ -1402,7 +1301,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/DadoTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="120">
           <caret line="15" column="52" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1412,7 +1311,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmDiretorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="1275">
           <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
           <folding />
         </state>
@@ -1420,9 +1319,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmNodos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="722">
           <caret line="123" column="49" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/utilidades/ProcessaStacksUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnaliseDeLog/src/main/java/interfaces/FrmStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2558#2566#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

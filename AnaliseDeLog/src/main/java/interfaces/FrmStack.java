@@ -107,6 +107,7 @@ class FrmStack extends JFrame {
 
 				String stringStack = String.join("\n", servicoFachada.direcionaStack((EntidadeThread) comboBox.getSelectedItem()));
 				jTextArea.setText(stringStack);
+				jTextArea.setEditable(false);
 
 				if (stringStack.contains("soluziona")) {
 					String regexDelimitaLinhasComSoluzionaZeus = "\\t[\\s[0-9]*[a-zA-Z]*]*]*]*.soluziona[.[0-9]*[a-zA-Z]*[\\_\\(\\:\\s]*]*]*[\\)]";
