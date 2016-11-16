@@ -116,11 +116,6 @@ class FrmStack extends JFrame {
 					while (matcher.find()) {
 						int inicio = matcher.start()+1;
 						int fim = matcher.end();
-						jTextArea.setSelectionStart(inicio);
-						jTextArea.setSelectionEnd(fim);
-						
-						
-						
 						try {
 							Highlighter highlight = jTextArea.getHighlighter();
 							Highlighter.HighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(
@@ -128,7 +123,6 @@ class FrmStack extends JFrame {
 							highlight.addHighlight(inicio, fim, painter);
 						} catch (BadLocationException bad) {
 							bad.printStackTrace();
-
 						}	
 				}
 			}
